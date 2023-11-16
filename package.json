@@ -16,6 +16,7 @@
   "devDependencies": {
     "@eslint/js": "^8.53.0",
     "@types/node": "^20.9.0",
+    "@reduxjs/toolkit": "^1.9.7",
     "@next/env": "^13.5.6",
     "@next/bundle-analyzer": "^13.5.6",
     "@types/react": "^18.2.37",

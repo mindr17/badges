@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 160px;
+
+  border: 1px solid white;
+  border-radius: 16px;
+}
+
+.h1 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+@media (width >= 768px) {
+  .h1 {
+    font-size: 52px;
+  }
+}
+
+.description {
+  display: flex;
+  font-size: 32px;
+}
