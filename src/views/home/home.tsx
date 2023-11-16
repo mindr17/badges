@@ -4,7 +4,7 @@ import CategoriesList from '@/views/home/categories-list/categories-list';
 
 import s from './home.module.css';
 
-export default function BadgeProduct(): JSX.Element {
+export default function Home(): JSX.Element {
   return (
     <div className={s.container}>
       <Hero />
