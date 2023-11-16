@@ -75,47 +75,5 @@ module.exports = {
         },
       },
     },
-    {
-      files: ['**/*.graphql'],
-      parserOptions: {
-        skipGraphQLConfig: true,
-        schema: 'schema.json',
-        operations: '**/*.graphql',
-      },
-      parser: '@graphql-eslint/eslint-plugin',
-      plugins: ['@graphql-eslint'],
-      extends: ['plugin:@graphql-eslint/operations-all'],
-      rules: {
-        '@graphql-eslint/alphabetize': [
-          'warn',
-          { selections: ['OperationDefinition'] },
-        ],
-        '@graphql-eslint/require-description': [
-          'error',
-          { FieldDefinition: true },
-        ],
-        '@graphql-eslint/no-duplicate-fields': 'error',
-        '@graphql-eslint/require-id-when-available': 'off',
-        '@graphql-eslint/naming-convention': [
-          'off',
-          {
-            OperationDefinition: {
-              style: 'PascalCase',
-              forbiddenPrefixes: [
-                'Query',
-                'Mutation',
-                'Subscription',
-                'Get',
-              ],
-              forbiddenSuffixes: [
-                'Query',
-                'Mutation',
-                'Subscription',
-              ],
-            },
-          },
-        ],
-      },
-    },
   ],
 };
