@@ -62,7 +62,7 @@ devDependencies:
     specifier: ^10.0.0
     version: 10.0.0(eslint@8.53.0)
   prettier:
-    specifier: ^3.0.3
+    specifier: ^3.1.0
     version: 3.1.0
   prettier-eslint:
     specifier: ^15.0.1
