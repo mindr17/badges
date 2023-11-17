@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import Stats from '@/shared/stats/stats';
+
 import s from './hero.module.css';
 
 export default function Hero(): JSX.Element {
@@ -22,6 +24,7 @@ export default function Hero(): JSX.Element {
         <div className={s.description}>
           For Github profile, personal website, etc
         </div>
+        <Stats />
       </div>
     </div>
   );
