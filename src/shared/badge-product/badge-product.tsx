@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+import { plusHtml } from '@/iconsHtml/iconsHtml';
+
+import Icon from '../icon/icon';
 import s from './badge-product.module.css';
 
 export default function BadgeProduct(): JSX.Element {
@@ -33,7 +36,9 @@ export default function BadgeProduct(): JSX.Element {
             }
           />
         </div>
-        <button className={s.addBtn}>Add</button>
+        <button className={s.addBtn}>
+          <Icon html={plusHtml} />
+        </button>
       </div>
       <button className={s.moreBtn}>...</button>
     </div>
