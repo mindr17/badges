@@ -23,7 +23,6 @@
 
 .selected {
   display: flex;
-  flex-wrap: wrap;
   gap: 2px;
   align-items: flex-start;
   justify-content: flex-start;
@@ -36,6 +35,12 @@
   /* border: 1px solid #2d2e2e; */
   border: 1px solid rgb(47 54 61);
   border-radius: 16px;
+}
+
+.badgesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .imgStandard {

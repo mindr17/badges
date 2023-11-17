@@ -18,14 +18,16 @@ export default function BadgeProduct(): JSX.Element {
       {/* <div className={s.topControls}></div> */}
       <div className={s.wrapper}>
         <div className={s.selected}>
-          {badgesImages.map((imgSrc, index) => (
-            <img
-              alt={''}
-              className={s.imgStandard}
-              key={index}
-              src={imgSrc}
-            />
-          ))}
+          <div className={s.badgesList}>
+            {badgesImages.map((imgSrc, index) => (
+              <img
+                alt={''}
+                className={s.imgStandard}
+                key={index}
+                src={imgSrc}
+              />
+            ))}
+          </div>
         </div>
         <div className={s.controls}>
           <div className={`${s.control} ${s.clear}`}>Clear</div>
