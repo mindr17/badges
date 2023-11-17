@@ -13,6 +13,7 @@
   --grey: rgb(255 255 255 / 12%);
   --grey-hover: rgb(255 255 255 / 32%);
   --box-shadow-slight: #2d2e2e;
+  --grey-dark: #2d2e2e;
 }
 
 * {

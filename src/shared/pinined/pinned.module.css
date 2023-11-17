@@ -1,0 +1,48 @@
+.container {
+  cursor: pointer;
+
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  overflow: hidden;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  height: 64px;
+  padding-left: 16px;
+
+  font-size: 24px;
+
+  background-color: var(--background-color);
+  border: 1px solid var(--grey-dark);
+  border-radius: 16px;
+}
+
+.description {
+  display: flex;
+}
+
+.grabBtn {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 16px;
+
+  font-size: 24px;
+
+  background-color: var(--green);
+  border-radius: 16px;
+}
+
+.container:hover .grabBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green-hover);
+}

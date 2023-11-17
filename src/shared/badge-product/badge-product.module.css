@@ -7,9 +7,6 @@
 
 .container:hover {
   /* background-color: var(--box-shadow-slight); */
-  box-shadow:
-    rgb(0 0 0 / 16%) 0 1px 4px,
-    rgb(230 230 230) 0 0 0 3px;
 }
 
 .badgeImaContainer {
@@ -45,11 +42,11 @@
   border-radius: 16px;
 }
 
-/* .add:hover {
+.add:hover .imgStandard {
   box-shadow:
-    rgb(0 0 0 / 16%) 0px 1px 4px,
-    rgb(230 230 230) 0px 0px 0px 3px;
-} */
+    rgb(0 0 0 / 16%) 0 1px 4px,
+    rgb(230 230 230) 0 0 0 3px;
+}
 
 .add:active {
   /* scale: 0.98; */
@@ -74,7 +71,7 @@
   flex-shrink: 0;
 
   aspect-ratio: 1;
-  height: 100%;
+  height: 56px;
 
   background-color: var(--grey);
   border-radius: 16px;
