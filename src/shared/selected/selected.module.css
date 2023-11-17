@@ -22,11 +22,13 @@
 
 .selected {
   display: flex;
+  flex-wrap: wrap;
   gap: 2px;
   align-items: flex-start;
   justify-content: flex-start;
 
   width: 100%;
+  padding: 24px;
 
   font-size: 32px;
 
