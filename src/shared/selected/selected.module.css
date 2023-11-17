@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
 
+  max-width: 1240px;
   min-height: 160px;
 
   border-radius: 16px;
