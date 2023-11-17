@@ -64,6 +64,6 @@
   font-size: 32px;
 }
 
-.stats {
-  display: flex;
+.statsContainer {
+  padding-top: 24px;
 }

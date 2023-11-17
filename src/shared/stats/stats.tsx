@@ -12,7 +12,7 @@ export default function Stats(props: Props) {
   // const { data } = props;
   const stats = [
     {
-      title: 'Клубов',
+      title: 'Badges',
       href: '',
       count: 2904,
     },
