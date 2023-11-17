@@ -1,8 +1,7 @@
 import Image from 'next/image';
 
-import Stats from '@/shared/stats/stats';
+import HomeStats from '@/shared/home-stats/home-stats';
 
-import HomeStats from '../home-stats/home-stats';
 import s from './hero.module.css';
 
 export default function Hero(): JSX.Element {
