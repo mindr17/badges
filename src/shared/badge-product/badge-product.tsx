@@ -1,6 +1,11 @@
 import Image from 'next/image';
 
-import { plusHtml } from '@/iconsHtml/iconsHtml';
+import {
+  plus2Html,
+  plus3Html,
+  plus4Html,
+  plusHtml,
+} from '@/iconsHtml/iconsHtml';
 
 import Icon from '../icon/icon';
 import s from './badge-product.module.css';
@@ -37,7 +42,7 @@ export default function BadgeProduct(): JSX.Element {
           />
         </div>
         <button className={s.addBtn}>
-          <Icon html={plusHtml} />
+          <Icon html={plus2Html} />
         </button>
       </div>
       <button className={s.moreBtn}>...</button>

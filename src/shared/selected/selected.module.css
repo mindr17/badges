@@ -53,6 +53,7 @@
   flex-direction: column;
   flex-shrink: 0;
   gap: 12px;
+  justify-content: flex-end;
 
   font-weight: 700;
 }
