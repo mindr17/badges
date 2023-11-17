@@ -11,10 +11,6 @@ import Icon from '@/shared/icon/icon';
 import s from './home-stats.module.css';
 
 export default function HomeStats(): JSX.Element {
-  const badgesCount = 2904;
-  const packsCount = 2325;
-  const grabbedCount = 291234234;
-
   const stats = [
     {
       title: 'Badges in library',
