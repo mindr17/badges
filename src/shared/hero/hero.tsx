@@ -13,10 +13,15 @@ export default function Hero(): JSX.Element {
           priority
           src={'/hero.jpg'}
         />
+        <div className={s.heroBottomShadow}></div>
       </div>
-      <div className={s.h1}>Get beautiful badges in a few clicks</div>
-      <div className={s.description}>
-        For Github profile, personal website, etc
+      <div className={s.content}>
+        <div className={s.h1}>
+          Get beautiful badges in a few clicks
+        </div>
+        <div className={s.description}>
+          For Github profile, personal website, etc
+        </div>
       </div>
     </div>
   );
