@@ -31,9 +31,7 @@ export default function BadgeProduct(): JSX.Element {
         />
       </div>
       <div className={s.controlsList}>
-        <button className={`${s.control} ${s.add}`}>
-          Add to selected
-        </button>
+        <button className={`${s.control} ${s.add}`}>Add</button>
         <button className={`${s.control} ${s.more}`}>...</button>
       </div>
     </div>

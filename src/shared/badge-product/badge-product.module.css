@@ -24,10 +24,11 @@
 .controlsList {
   display: flex;
   gap: 6px;
-  width: 100%;
 }
 
 .control {
+  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,10 +43,11 @@
 }
 
 .add {
-  width: 100%;
+  width: 64px;
 }
 
 .more {
   flex-shrink: 0;
+  width: 100%;
   width: 32px;
 }
