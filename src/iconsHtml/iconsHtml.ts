@@ -35,6 +35,26 @@ export const iconsTotalBadges = `<svg width="48" height="48" viewBox="0 0 48 48"
 </svg>
 `;
 
+export const packsBadgesCountHtml = `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="user_group_outlined">
+<g id="Union">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.99345 16.5C8.99345 10.701 13.6945 6 19.4934 6C25.2924 6 29.9934 10.701 29.9934 16.5C29.9934 19.4865 28.7466 22.1817 26.7452 24.0936C32.1546 26.6034 36.0443 31.8344 36.6586 38.0301C36.8864 40.3273 34.9979 42 32.9934 42H5.99345C3.98899 42 2.10052 40.3273 2.32828 38.0301C2.94255 31.8344 6.83228 26.6034 12.2417 24.0936C10.2403 22.1817 8.99345 19.4865 8.99345 16.5ZM25.4934 16.5C25.4934 19.8137 22.8072 22.5 19.4934 22.5C16.1797 22.5 13.4934 19.8137 13.4934 16.5C13.4934 13.1863 16.1797 10.5 19.4934 10.5C22.8072 10.5 25.4934 13.1863 25.4934 16.5ZM6.94101 37.5C8.00269 31.5324 13.22 27 19.4934 27C25.7669 27 30.9842 31.5324 32.0459 37.5H6.94101Z" fill="url(#paint0_linear_2602_16418)"/>
+<path d="M32.9934 9C31.7508 9 30.7434 10.0074 30.7434 11.25C30.7434 12.4926 31.7508 13.5 32.9934 13.5C35.0645 13.5 36.7434 15.1789 36.7434 17.25C36.7434 19.3211 35.0645 21 32.9934 21C31.7508 21 30.7434 22.0074 30.7434 23.25C30.7434 24.4926 31.7508 25.5 32.9934 25.5C37.964 25.5 41.9934 29.5294 41.9934 34.5C41.9934 35.7426 43.0008 36.75 44.2434 36.75C45.4861 36.75 46.4934 35.7426 46.4934 34.5C46.4934 29.3242 43.5807 24.8287 39.305 22.5632C40.5146 21.1278 41.2434 19.274 41.2434 17.25C41.2434 12.6937 37.5498 9 32.9934 9Z" fill="url(#paint1_linear_2602_16418)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2602_16418" x1="24.4015" y1="6" x2="24.4015" y2="42" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B96A0F"/>
+<stop offset="1" stop-color="#B96A0F" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2602_16418" x1="24.4015" y1="6" x2="24.4015" y2="42" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B96A0F"/>
+<stop offset="1" stop-color="#B96A0F" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+`;
+
 export const iconsStatsHtml = `<svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Menu Icon">
 <g id="Union">

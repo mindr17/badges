@@ -4,6 +4,7 @@ import { formatNumberWithCommas } from '@/helpers/helpers';
 import {
   iconsStatsHtml,
   iconsTotalBadges,
+  packsBadgesCountHtml,
 } from '@/iconsHtml/iconsHtml';
 import Icon from '@/shared/icon/icon';
 
@@ -11,28 +12,51 @@ import s from './home-stats.module.css';
 
 export default function HomeStats(): JSX.Element {
   const badgesCount = 2904;
-  const grabbedCount = 291234;
+  const packsCount = 2325;
+  const grabbedCount = 291234234;
+
+  const stats = [
+    {
+      title: 'Badges in library',
+      count: 2904,
+      containerStyle: s.clubs,
+      titleStyle: s.red,
+      iconHtml: iconsTotalBadges,
+    },
+    {
+      title: 'Starter packs',
+      count: 2325,
+      containerStyle: s.ratings,
+      titleStyle: s.yellow,
+      iconHtml: packsBadgesCountHtml,
+    },
+    {
+      title: 'Badges grabbed',
+      count: 291234234,
+      containerStyle: s.cities,
+      titleStyle: s.green,
+      iconHtml: iconsStatsHtml,
+    },
+  ];
 
   return (
     <div className={s.container}>
-      <div className={`${s.link} ${s.clubs}`}>
-        <div className={`${s.h3} ${s.red}`}>Badges in library</div>
-        <div className={s.count}>
-          {formatNumberWithCommas(badgesCount)}
-        </div>
-        <div className={s.icon}>
-          <Icon html={iconsTotalBadges} />
-        </div>
-      </div>
-      <div className={`${s.link} ${s.cities}`}>
-        <div className={`${s.h3} ${s.green}`}>Badges grabbed</div>
-        <div className={s.count}>
-          {formatNumberWithCommas(grabbedCount)}
-        </div>
-        <div className={s.icon}>
-          <Icon html={iconsStatsHtml} />
-        </div>
-      </div>
+      {stats.map((stat, index) => {
+        const { title, count, containerStyle, titleStyle, iconHtml } =
+          stat;
+
+        return (
+          <div className={`${s.link} ${containerStyle}`} key={index}>
+            <div className={`${s.h3} ${titleStyle}`}>{title}</div>
+            <div className={s.count}>
+              {formatNumberWithCommas(count)}
+            </div>
+            <div className={s.icon}>
+              <Icon html={iconHtml} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
