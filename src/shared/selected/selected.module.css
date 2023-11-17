@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
   justify-content: center;
 
   min-height: 160px;
@@ -48,6 +47,8 @@
   flex-direction: column;
   flex-shrink: 0;
   gap: 12px;
+
+  font-weight: 700;
 }
 
 .control {
@@ -70,4 +71,12 @@
 
 .clear:hover {
   background-color: var(--red-hover);
+}
+
+.copyMarkdown {
+  background-color: var(--green);
+}
+
+.copyMarkdown:hover {
+  background-color: var(--green-hover);
 }

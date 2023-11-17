@@ -12,7 +12,7 @@ export default function BadgeProduct(): JSX.Element {
   return (
     <div className={s.container}>
       <h2 className={s.h2}>Selected badges</h2>
-      <div className={s.topControls}></div>
+      {/* <div className={s.topControls}></div> */}
       <div className={s.wrapper}>
         <div className={s.selected}>
           {badgesImages.map((imgSrc, index) => (
@@ -26,8 +26,10 @@ export default function BadgeProduct(): JSX.Element {
         </div>
         <div className={s.controls}>
           <div className={`${s.control} ${s.clear}`}>Clear</div>
-          <div className={s.control}>Copy html</div>
-          <div className={s.control}>Copy Markdown</div>
+          <div className={s.control}>Copy HTML</div>
+          <div className={`${s.control} ${s.copyMarkdown}`}>
+            Copy Markdown
+          </div>
         </div>
       </div>
     </div>
