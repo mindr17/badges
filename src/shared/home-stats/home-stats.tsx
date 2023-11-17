@@ -36,7 +36,7 @@ export default function HomeStats(): JSX.Element {
   ];
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id='selected'>
       {stats.map((stat, index) => {
         const { title, count, containerStyle, titleStyle, iconHtml } =
           stat;
