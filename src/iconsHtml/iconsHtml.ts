@@ -5,6 +5,36 @@ export const house = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height=
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.375 13.5C6.375 12.8787 6.87868 12.375 7.5 12.375H16.5C17.1213 12.375 17.625 12.8787 17.625 13.5C17.625 14.1214 17.1213 14.625 16.5 14.625H7.5C6.87868 14.625 6.375 14.1214 6.375 13.5Z" fill="#D33832"/>
 </svg>`;
 
+export const iconsTotalBadges = `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Menu Icon">
+<g id="Union">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.9498 1.7881C25.1498 1.73651 27.4682 2.29321 29.3303 3.59671L41.6865 12.2541C43.0504 13.2052 44.167 14.6434 44.9371 16.1188C45.7077 17.595 46.25 19.3334 46.25 21V35.56C46.25 41.4192 41.4661 46.23 35.58 46.23H12.42C6.53042 46.23 1.75 41.4157 1.75 35.54V20.72C1.75 19.1536 2.24072 17.5015 2.93504 16.0864C3.6295 14.671 4.6366 13.2705 5.87704 12.3052L16.657 3.90518C18.4562 2.5058 20.7497 1.83969 22.9498 1.7881ZM19.4214 7.45602L8.64296 15.8548C8.08414 16.2894 7.4602 17.0796 6.97496 18.0686C6.48928 19.0585 6.25 20.0264 6.25 20.72V35.54C6.25 38.9443 9.02958 41.73 12.42 41.73H35.58C38.9739 41.73 41.75 38.9408 41.75 35.56V21C41.75 20.2466 41.4823 19.225 40.9479 18.2012C40.4134 17.1772 39.7288 16.3748 39.1135 15.9459L26.7497 7.28325C25.8119 6.6271 24.4798 6.25346 23.0552 6.28686C21.6305 6.32027 20.3222 6.75564 19.4214 7.45602Z" fill="url(#paint0_linear_2602_16409)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 24C12.75 19.4574 16.4574 15.75 21 15.75H27C31.5426 15.75 35.25 19.4574 35.25 24V30C35.25 34.5426 31.5426 38.25 27 38.25H21C16.4574 38.25 12.75 34.5426 12.75 30V24ZM21 20.25C18.9426 20.25 17.25 21.9426 17.25 24V30C17.25 32.0574 18.9426 33.75 21 33.75H27C29.0574 33.75 30.75 32.0574 30.75 30V24C30.75 21.9426 29.0574 20.25 27 20.25H21Z" fill="url(#paint1_linear_2602_16409)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24 15.75C25.2426 15.75 26.25 16.7574 26.25 18V36C26.25 37.2426 25.2426 38.25 24 38.25C22.7574 38.25 21.75 37.2426 21.75 36V18C21.75 16.7574 22.7574 15.75 24 15.75Z" fill="url(#paint2_linear_2602_16409)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 27C12.75 25.7574 13.7574 24.75 15 24.75H33C34.2426 24.75 35.25 25.7574 35.25 27C35.25 28.2426 34.2426 29.25 33 29.25H15C13.7574 29.25 12.75 28.2426 12.75 27Z" fill="url(#paint3_linear_2602_16409)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2602_16409" x1="24" y1="1.78483" x2="24" y2="46.23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E83B35"/>
+<stop offset="1" stop-color="#E83B35" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2602_16409" x1="24" y1="1.78483" x2="24" y2="46.23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E83B35"/>
+<stop offset="1" stop-color="#E83B35" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2602_16409" x1="24" y1="1.78483" x2="24" y2="46.23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E83B35"/>
+<stop offset="1" stop-color="#E83B35" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint3_linear_2602_16409" x1="24" y1="1.78483" x2="24" y2="46.23" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E83B35"/>
+<stop offset="1" stop-color="#E83B35" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+`;
+
 export const iconsStatsHtml = `<svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Menu Icon">
 <g id="Union">
