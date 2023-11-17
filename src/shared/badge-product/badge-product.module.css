@@ -86,3 +86,30 @@
 .added {
   background-color: var(--red);
 }
+
+.selected {
+  aspect-ratio: 1;
+  height: 100%;
+  background-color: var(--red);
+  border-radius: 16px;
+}
+
+.add:hover .selected {
+  background-color: var(--red-hover);
+}
+
+.addIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectedIcon {
+  transform: rotate(45deg);
+}
+
+.selectedIcon:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

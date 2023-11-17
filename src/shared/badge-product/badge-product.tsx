@@ -1,21 +1,22 @@
-import Image from 'next/image';
+'use client';
 
-import {
-  moreHtmlHorizontal,
-  moreHtmlVertical,
-  plus2Html,
-  plus3Html,
-  plus4Html,
-  plusHtml,
-} from '@/iconsHtml/iconsHtml';
+import { useState } from 'react';
+
+import { moreHtmlHorizontal, plus2Html } from '@/iconsHtml/iconsHtml';
 
 import Icon from '../icon/icon';
 import s from './badge-product.module.css';
 
 export default function BadgeProduct(): JSX.Element {
+  const [isSelected, setIsSelected] = useState(true);
+
+  const handleSelect = () => {
+    setIsSelected((prevState) => !prevState);
+  };
+
   return (
     <div className={s.container}>
-      <div className={s.add}>
+      <div className={s.add} onClick={handleSelect}>
         <div className={s.badge}>
           {/* <Image
           alt={''}
@@ -41,8 +42,10 @@ export default function BadgeProduct(): JSX.Element {
             }
           />
         </div>
-        <button className={`${s.addBtn}`}>
-          <Icon html={plus2Html} />
+        <button className={`${isSelected ? s.selected : s.addBtn}`}>
+          <div className={isSelected ? s.selectedIcon : s.addIcon}>
+            <Icon html={plus2Html} />
+          </div>
         </button>
       </div>
       <button className={s.moreBtn}>
