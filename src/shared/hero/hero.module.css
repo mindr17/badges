@@ -41,7 +41,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 
@@ -65,5 +65,5 @@
 }
 
 .statsContainer {
-  padding-top: 24px;
+  padding-top: 16px;
 }
