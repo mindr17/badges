@@ -1,7 +1,15 @@
 .container {
   display: flex;
-  gap: 6px;
+  gap: 12px;
   width: 100%;
+  border-radius: 16px;
+}
+
+.container:hover {
+  /* background-color: var(--box-shadow-slight); */
+  box-shadow:
+    rgb(0 0 0 / 16%) 0 1px 4px,
+    rgb(230 230 230) 0 0 0 3px;
 }
 
 .badgeImaContainer {
@@ -19,35 +27,65 @@
 }
 
 .imgStandard {
+  overflow: hidden;
+  height: 56px;
+  border-radius: 16px;
 }
 
-.controlsList {
-  display: flex;
-  gap: 6px;
-}
-
-.control {
+.add {
   cursor: pointer;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  height: 32px;
-
-  font-size: 16px;
-  color: #000;
-
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-.add {
-  width: 64px;
-}
-
-.more {
-  flex-shrink: 0;
   width: 100%;
-  width: 32px;
+  height: 56px;
+
+  border-radius: 16px;
+}
+
+/* .add:hover {
+  box-shadow:
+    rgb(0 0 0 / 16%) 0px 1px 4px,
+    rgb(230 230 230) 0px 0px 0px 3px;
+} */
+
+.add:active {
+  /* scale: 0.98; */
+
+  /* height: 95%;/ */
+}
+
+.addBtn {
+  aspect-ratio: 1;
+  height: 100%;
+  background-color: var(--green);
+  border-radius: 16px;
+}
+
+.add:hover .addBtn {
+  background-color: var(--green-hover);
+}
+
+.moreBtn {
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  aspect-ratio: 1;
+  height: 100%;
+
+  background-color: var(--grey);
+  border-radius: 16px;
+
+  /* background-color: rgb(107 107 107); */
+}
+
+.moreBtn:hover {
+  background-color: var(--grey-hover);
+}
+
+.added {
+  background-color: var(--red);
 }

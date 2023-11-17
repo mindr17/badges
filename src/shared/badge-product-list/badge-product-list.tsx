@@ -8,6 +8,7 @@ export default function BadgeProductList(): JSX.Element {
       <BadgeProduct />
       <BadgeProduct />
       <BadgeProduct />
+      <BadgeProduct />
     </div>
   );
 }
