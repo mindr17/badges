@@ -104,3 +104,17 @@ export const plus2Html = `
 export const plus3Html = `<svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>`;
 
 export const plus4Html = `<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 2v9h9v2h-9v9h-2v-9h-9v-2h9v-9h2zm2-2h-6v9h-9v6h9v9h6v-9h9v-6h-9v-9z"/></svg>`;
+
+export const moreHtmlVertical = `
+<svg 
+  fill="currentcolor"
+  clip-rule="evenodd"
+  fill-rule="evenodd"
+  stroke-linejoin="round"
+  stroke-miterlimit="2"
+  height="32"
+  viewBox="0 0 24 24" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+    <path d="m12 16.495c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm0-6.75c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm0-6.75c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25z"/>
+</svg>`;
