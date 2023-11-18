@@ -11,9 +11,10 @@ export default function Category(props: Props): JSX.Element {
   const { title } = category;
 
   return (
-    <div className={s.category}>
+    <div className={s.container}>
       <h3 className={s.h3}>{title}</h3>
       <BadgeProductList />
+      <div className={s.more}></div>
     </div>
   );
 }
