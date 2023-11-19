@@ -19,20 +19,20 @@ export default function HomeStats(): JSX.Element {
       titleStyle: s.red,
       iconHtml: iconsTotalBadges,
     },
-    {
-      title: 'Starter packs',
-      count: 2325,
-      containerStyle: s.ratings,
-      titleStyle: s.yellow,
-      iconHtml: packsBadgesCountHtml,
-    },
-    {
-      title: 'Badges grabbed',
-      count: 291234234,
-      containerStyle: s.cities,
-      titleStyle: s.green,
-      iconHtml: iconsStatsHtml,
-    },
+    // {
+    //   title: 'Starter packs',
+    //   count: 2325,
+    //   containerStyle: s.ratings,
+    //   titleStyle: s.yellow,
+    //   iconHtml: packsBadgesCountHtml,
+    // },
+    // {
+    //   title: 'Badges grabbed',
+    //   count: 291234234,
+    //   containerStyle: s.cities,
+    //   titleStyle: s.green,
+    //   iconHtml: iconsStatsHtml,
+    // },
   ];
 
   return (

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { copyMd } from '@/helpers/selected/copy-md';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import {
   clearSelected,
@@ -50,7 +51,10 @@ export default function Selected(): JSX.Element {
             Clear
           </div>
           <div className={s.control}>Copy HTML</div>
-          <div className={`${s.control} ${s.copyMarkdown}`}>
+          <div
+            className={`${s.control} ${s.copyMarkdown}`}
+            onClick={() => copyMd(selectedBadges)}
+          >
             Copy Markdown
           </div>
         </div>
