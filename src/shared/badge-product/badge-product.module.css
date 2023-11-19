@@ -24,9 +24,16 @@
 }
 
 .imgStandard {
+  cursor: pointer;
   overflow: hidden;
   height: 56px;
   border-radius: 16px;
+}
+
+.imgStandard:hover {
+  box-shadow:
+    rgb(0 0 0 / 16%) 0 1px 4px,
+    rgb(230 230 230) 0 0 0 3px;
 }
 
 .add {

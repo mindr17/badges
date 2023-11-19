@@ -26,7 +26,6 @@ export const selectedSlice = createSlice({
       state.selected = selected;
     },
     deleteFromSelected: (state, action: PayloadAction<BadgeType>) => {
-      console.log();
       const selected = state.selected.filter(
         (badge) =>
           JSON.stringify(badge) !== JSON.stringify(action.payload)
@@ -34,11 +33,18 @@ export const selectedSlice = createSlice({
 
       state.selected = selected;
     },
+    clearSelected: (state) => {
+      state.selected = [];
+    },
   },
 });
 
-export const { addToSelected, deleteFromSelected, initSelected } =
-  selectedSlice.actions;
+export const {
+  addToSelected,
+  deleteFromSelected,
+  initSelected,
+  clearSelected,
+} = selectedSlice.actions;
 
 export const getSelected = (store: RootState) => store.selected;
 
