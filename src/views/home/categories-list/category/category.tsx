@@ -14,7 +14,7 @@ export default function Category(props: Props): JSX.Element {
     <div className={s.container}>
       <h3 className={s.h3}>{title}</h3>
       <BadgeProductList />
-      <div className={s.more}></div>
+      <button className={s.more}>All {title}</button>
     </div>
   );
 }
