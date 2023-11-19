@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { useState } from 'react';
-
 import { moreHtmlHorizontal, plus2Html } from '@/iconsHtml/iconsHtml';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import {
+  addToSelected,
+  deleteFromSelected,
+  getSelected,
+} from '@/store/selected-slice/selected-slice';
 import { BadgeType } from '@/types/types';
 
 import Icon from '../icon/icon';
@@ -15,11 +19,19 @@ interface Props {
 
 export default function BadgeProduct(props: Props): JSX.Element {
   const { badge } = props;
+  const isSelected = useAppSelector(getSelected);
+  const dispatch = useAppDispatch();
+
   const { title, hex, source } = badge;
-  const [isSelected, setIsSelected] = useState(false);
 
   const handleSelect = () => {
-    setIsSelected((prevState) => !prevState);
+    if (isSelected) {
+      dispatch(deleteFromSelected(badge));
+
+      return;
+    }
+
+    dispatch(addToSelected(badge));
   };
 
   return (

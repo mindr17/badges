@@ -1,14 +1,13 @@
-// import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-// // import favoritesSlice from './favoritesSlice';
-// // import sliderSlice from './sliderSlice';
+import selectedSlice from './selected-slice/selected-slice';
 
-// // const store = configureStore({
-// //   reducer: { favorites: favoritesSlice, slider: sliderSlice },
-// // });
+const store = configureStore({
+  reducer: { selected: selectedSlice },
+});
 
-// export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 
-// export type AppDispatch = typeof store.dispatch;
+export type AppDispatch = typeof store.dispatch;
 
-// export default store;
+export default store;
