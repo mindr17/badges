@@ -8,7 +8,7 @@ import Icon from '../icon/icon';
 import s from './badge-product.module.css';
 
 export default function BadgeProduct(): JSX.Element {
-  const [isSelected, setIsSelected] = useState(true);
+  const [isSelected, setIsSelected] = useState(false);
 
   const handleSelect = () => {
     setIsSelected((prevState) => !prevState);
