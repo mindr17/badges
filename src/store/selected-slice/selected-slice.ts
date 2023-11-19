@@ -26,11 +26,13 @@ export const favoritesSlice = createSlice({
       state.selected = selected;
     },
     deleteFromSelected: (state, action: PayloadAction<BadgeType>) => {
-      const favorites = state.selected.filter(
-        (favorite) => favorite !== action.payload
+      console.log();
+      const selected = state.selected.filter(
+        (badge) =>
+          JSON.stringify(badge) !== JSON.stringify(action.payload)
       );
 
-      state.selected = favorites;
+      state.selected = selected;
     },
   },
 });
