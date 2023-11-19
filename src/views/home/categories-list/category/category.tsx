@@ -1,9 +1,10 @@
 import BadgeProductList from '@/shared/badge-product-list/badge-product-list';
+import { CategoryType } from '@/types/types';
 
 import s from './category.module.css';
 
 interface Props {
-  category: any;
+  category: CategoryType;
 }
 
 export default function Category(props: Props): JSX.Element {
@@ -13,7 +14,7 @@ export default function Category(props: Props): JSX.Element {
   return (
     <div className={s.container}>
       <h3 className={s.h3}>{title}</h3>
-      <BadgeProductList />
+      <BadgeProductList category={category} />
       <button className={s.more}>More {title}</button>
     </div>
   );

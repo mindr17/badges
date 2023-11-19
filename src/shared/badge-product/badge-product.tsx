@@ -1,13 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from 'react';
 
 import { moreHtmlHorizontal, plus2Html } from '@/iconsHtml/iconsHtml';
+import { BadgeType } from '@/types/types';
 
 import Icon from '../icon/icon';
 import s from './badge-product.module.css';
 
-export default function BadgeProduct(): JSX.Element {
+interface Props {
+  badge: BadgeType;
+}
+
+export default function BadgeProduct(props: Props): JSX.Element {
+  const { badge } = props;
+  const { title, hex, source } = badge;
   const [isSelected, setIsSelected] = useState(false);
 
   const handleSelect = () => {
@@ -34,12 +42,16 @@ export default function BadgeProduct(): JSX.Element {
             }
           />
         </div> */}
-          <img
-            alt={''}
+          {/* <img
+            alt={title}
             className={s.imgStandard}
-            src={
-              'https://camo.githubusercontent.com/4ed50763c79fd4067a991accc4c0dc5c687ab5020c3041b28a89d1c105e78a84/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d4637444631453f7374796c653d666f722d7468652d6261646765266c6f676f3d4a617661536372697074266c6f676f436f6c6f723d303030303030'
-            }
+            src={source}
+            // style={{ backgroundColor: 'hex' }}
+          /> */}
+          <img
+            alt={title}
+            className={s.imgStandard}
+            src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
           />
         </div>
         <button className={`${isSelected ? s.selected : s.addBtn}`}>
