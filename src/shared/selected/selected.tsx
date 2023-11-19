@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useState } from 'react';
+
 import { copyMd } from '@/helpers/selected/copy-md';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import {
@@ -12,6 +14,22 @@ import s from './selected.module.css';
 export default function Selected(): JSX.Element {
   const dispatch = useAppDispatch();
   const selectedBadges = useAppSelector(getSelected).selected;
+  const [mdCopied, setMdCopied] = useState(false);
+
+  const handleCopyMd = () => {
+    copyMd(selectedBadges);
+    setMdCopied(true);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMdCopied(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [mdCopied]);
 
   return (
     <div className={s.container}>
@@ -50,12 +68,12 @@ export default function Selected(): JSX.Element {
           >
             Clear
           </div>
-          <div className={s.control}>Copy HTML</div>
+          {/* <div className={s.control}>Copy HTML</div> */}
           <div
             className={`${s.control} ${s.copyMarkdown}`}
-            onClick={() => copyMd(selectedBadges)}
+            onClick={handleCopyMd}
           >
-            Copy Markdown
+            {mdCopied ? 'Copied!' : 'Copy Markdown'}
           </div>
         </div>
       </div>
