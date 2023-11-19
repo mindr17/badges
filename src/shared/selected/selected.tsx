@@ -11,7 +11,7 @@ const badgesImages = [
   'https://camo.githubusercontent.com/f2009c37ee59f56f038973e9b3049709419c41ac5346ffc6858c2cdc6deabb07/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5075707065746565722d3430423541343f7374796c653d666f722d7468652d6261646765266c6f676f3d507570706574656572266c6f676f436f6c6f723d464646464646',
 ];
 
-export default function BadgeProduct(): JSX.Element {
+export default function Selected(): JSX.Element {
   return (
     <div className={s.container}>
       <h2 className={s.h2}>Selected badges</h2>

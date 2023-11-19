@@ -12,7 +12,7 @@ const initialState: stateType = {
   selected: [],
 };
 
-export const favoritesSlice = createSlice({
+export const selectedSlice = createSlice({
   name: 'selected',
 
   initialState,
@@ -38,8 +38,8 @@ export const favoritesSlice = createSlice({
 });
 
 export const { addToSelected, deleteFromSelected, initSelected } =
-  favoritesSlice.actions;
+  selectedSlice.actions;
 
 export const getSelected = (store: RootState) => store.selected;
 
-export default favoritesSlice.reducer;
+export default selectedSlice.reducer;

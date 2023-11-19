@@ -19,12 +19,12 @@ interface Props {
 
 export default function BadgeProduct(props: Props): JSX.Element {
   const { badge } = props;
-  const { title, hex } = badge;
+  const dispatch = useAppDispatch();
   const isSelected = useAppSelector(getSelected).selected.find(
     (storeBadge) =>
       JSON.stringify(storeBadge) === JSON.stringify(badge)
   );
-  const dispatch = useAppDispatch();
+  const { title, hex } = badge;
 
   const handleSelect = () => {
     if (isSelected) {

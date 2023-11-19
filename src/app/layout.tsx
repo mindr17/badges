@@ -3,7 +3,6 @@
 import './globals.css';
 
 // import '@/styles/normalize.css';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Provider } from 'react-redux';
 

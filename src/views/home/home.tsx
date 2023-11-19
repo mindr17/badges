@@ -1,3 +1,5 @@
+'use client';
+
 import Header from '@/shared/header/header';
 import Hero from '@/shared/hero/hero';
 import Pinned from '@/shared/pinined/pinned';
