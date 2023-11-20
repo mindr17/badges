@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import { getCount } from './get-count-thunk';
-import { setCount } from './set-count-thunk';
 
 interface State {
   count: number;
@@ -26,7 +25,7 @@ export const statsSlice = createSlice({
         state.count = action.payload;
         state.isLoading = false;
       })
-      .addCase(setCount.fulfilled, (state, action) => {
+      .addCase(addCount.fulfilled, (state, action) => {
         state.count = action.payload;
         state.isLoading = false;
       });
