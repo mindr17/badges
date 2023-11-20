@@ -289,7 +289,7 @@ export const categories: CategoryType[] = [
     ],
   },
   {
-    title: 'Operting systems',
+    title: 'Operating systems',
     badges: [
       {
         title: 'Ubuntu',
