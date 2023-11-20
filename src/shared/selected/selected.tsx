@@ -1,3 +1,5 @@
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
 import { ActionCreators } from 'redux-undo';
@@ -57,6 +59,7 @@ export default function Selected(): JSX.Element {
                   key={index}
                   onClick={() => dispatch(deleteFromSelected(badge))}
                   src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
+                  suppressHydrationWarning
                 />
               );
             })}

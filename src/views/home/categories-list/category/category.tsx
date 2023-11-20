@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 import BadgeProductList from '@/shared/badge-product-list/badge-product-list';

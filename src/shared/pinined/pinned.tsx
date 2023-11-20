@@ -1,3 +1,5 @@
+'use client';
+
 import { useAppSelector } from '@/store/hooks';
 import { getSelected } from '@/store/selected-slice/selected-slice';
 
@@ -8,7 +10,7 @@ export default function Pinned(): JSX.Element {
 
   return (
     <a className={s.container} href='#selected'>
-      <div className={s.description}>
+      <div className={s.description} suppressHydrationWarning>
         {selectedBadges && selectedBadges.length} badges selected
       </div>
       <button className={s.grabBtn}>Grab</button>

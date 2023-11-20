@@ -9,6 +9,7 @@ type stateType = {
 };
 
 const initialState: stateType = {
+  // selected: getFromLocalStorage('badgesState') || [],
   selected: [],
 };
 
@@ -22,8 +23,8 @@ export const selectedSlice = createSlice({
     },
     addToSelected: (state, action: PayloadAction<BadgeType>) => {
       const selected = [...state.selected, action.payload];
-
       state.selected = selected;
+      // setToLocalStorage('badgesState', selected);
     },
     deleteFromSelected: (state, action: PayloadAction<BadgeType>) => {
       const selected = state.selected.filter(
@@ -32,9 +33,11 @@ export const selectedSlice = createSlice({
       );
 
       state.selected = selected;
+      // setToLocalStorage('badgesState', selected);
     },
     clearSelected: (state) => {
       state.selected = [];
+      // setToLocalStorage('badgesState', selected);
     },
   },
 });
