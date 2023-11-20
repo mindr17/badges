@@ -54,20 +54,24 @@ export default function Selected(): JSX.Element {
                 src={imgSrc}
               />
             ))} */}
-            {selectedBadges?.map((badge, index) => {
-              const { title, hex } = badge;
+            {selectedBadges && selectedBadges.length > 0
+              ? selectedBadges?.map((badge, index) => {
+                  const { title, hex } = badge;
 
-              return (
-                <img
-                  alt={title}
-                  className={s.imgStandard}
-                  key={index}
-                  onClick={() => dispatch(deleteFromSelected(badge))}
-                  src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
-                  suppressHydrationWarning
-                />
-              );
-            })}
+                  return (
+                    <img
+                      alt={title}
+                      className={s.imgStandard}
+                      key={index}
+                      onClick={() =>
+                        dispatch(deleteFromSelected(badge))
+                      }
+                      src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
+                      suppressHydrationWarning
+                    />
+                  );
+                })
+              : 'Start by clicking on badges below'}
           </div>
         </div>
         <div className={s.controls}>
