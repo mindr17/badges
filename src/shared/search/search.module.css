@@ -73,5 +73,6 @@
   gap: 12px;
 
   width: 100%;
+  max-width: 460px;
   padding: 12px;
 }

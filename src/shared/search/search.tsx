@@ -26,6 +26,21 @@ export default function Search(): JSX.Element {
 
   useEffect(() => {
     fetchData().then((data) => setAllBadges(data?.default?.icons));
+
+    const escHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSearchString('');
+      }
+    };
+
+    const escListener = window.addEventListener(
+      'keydown',
+      escHandler
+    );
+
+    return () => {
+      window.removeEventListener('keydown', escListener);
+    };
   }, []);
 
   useEffect(() => {
@@ -71,6 +86,7 @@ export default function Search(): JSX.Element {
             onChange={(e) => setSearchString(e.target.value)}
             placeholder='Start typing...'
             type='text'
+            value={searchString}
           />
           {/* <button aria-label='поиск' className={s.btn}>
             
