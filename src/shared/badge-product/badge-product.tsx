@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
 import { moreHtmlHorizontal, plus2Html } from '@/iconsHtml/iconsHtml';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import {
@@ -17,6 +20,15 @@ interface Props {
   badge: BadgeType;
 }
 
+const variants = {
+  rotate: { rotate: [0, 45, 0], transition: { duration: 0.15 } },
+  removed: { rotate: [0, -45, 0], transition: { duration: 0.15 } },
+  stop: {
+    y: [0, 0, 0],
+    transition: { repeat: Infinity, repeatDelay: 3 },
+  },
+};
+
 export default function BadgeProduct(props: Props): JSX.Element {
   const { badge } = props;
   const dispatch = useAppDispatch();
@@ -26,13 +38,17 @@ export default function BadgeProduct(props: Props): JSX.Element {
   );
   const { title, hex } = badge;
 
+  const [removed, setRemoved] = useState(false);
+
   const handleSelect = () => {
     if (isSelected) {
       dispatch(deleteFromSelected(badge));
+      setRemoved(true);
 
       return;
     }
 
+    setRemoved(false);
     dispatch(addToSelected(badge));
   };
 
@@ -70,7 +86,21 @@ export default function BadgeProduct(props: Props): JSX.Element {
         </div>
         <button className={`${isSelected ? s.selected : s.addBtn}`}>
           <div className={isSelected ? s.selectedIcon : s.addIcon}>
-            <Icon html={plus2Html} />
+            <motion.div
+              animate={{ rotate: 360, transition: { duration: 1 } }}
+            >
+              <motion.div
+                animate={removed ? 'removed' : 'stop'}
+                variants={variants}
+              >
+                <motion.div
+                  animate={isSelected ? 'rotate' : 'stop'}
+                  variants={variants}
+                >
+                  <Icon html={plus2Html} />
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </button>
       </div>

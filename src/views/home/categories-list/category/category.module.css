@@ -32,3 +32,13 @@
 .more:hover {
   background-color: rgb(255 255 255 / 32%);
 }
+
+.telegram {
+  font-weight: 700;
+  color: var(--green);
+  text-decoration: underline dotted;
+}
+
+.telegram:hover {
+  color: var(--green-hover);
+}
