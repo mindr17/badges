@@ -9,7 +9,8 @@ import {
 } from '@/iconsHtml/iconsHtml';
 import Icon from '@/shared/icon/icon';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { getCount } from '@/store/stats-slice/stats-thunk';
+import { getCount } from '@/store/stats-slice/get-count-thunk';
+import { setCount } from '@/store/stats-slice/set-count-thunk';
 
 import s from './home-stats.module.css';
 
@@ -18,6 +19,7 @@ export default function HomeStats(): JSX.Element {
   const { count } = useAppSelector((state) => state.stats);
 
   useEffect(() => {
+    dispatch(setCount());
     dispatch(getCount());
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
