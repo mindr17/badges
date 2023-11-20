@@ -7,10 +7,8 @@ import statsSlice from './stats-slice/stats-slice';
 const store = configureStore({
   reducer: {
     selected: undoable(selectedSlice, {
-      limit: 10,
+      limit: 100,
     }),
-  },
-  stats: {
     stats: statsSlice,
   },
 });
