@@ -118,16 +118,56 @@ export const categories: CategoryType[] = [
         guidelines: 'https://www.python.org/community/logos/',
       },
       {
-        title: 'C++',
-        hex: '00599C',
+        title: 'C Sharp',
+        hex: '512BD4',
         source:
-          'https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186',
+          'https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1',
+        aliases: {
+          aka: ['C#'],
+        },
       },
       {
         title: 'Swift',
         hex: 'F05138',
         source: 'https://developer.apple.com/swift/resources/',
         guidelines: 'https://developer.apple.com/swift/resources/',
+      },
+    ],
+  },
+  {
+    title: 'Low-level Languages',
+    badges: [
+      {
+        title: 'C',
+        hex: 'A8B9CC',
+        source:
+          'https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg',
+      },
+      {
+        title: 'C++',
+        hex: '00599C',
+        source:
+          'https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186',
+      },
+      {
+        title: 'Fortran',
+        hex: '734F96',
+        source:
+          'https://github.com/fortran-lang/fortran-lang.org/blob/5469465d08d3fcbf16d048e651ca5c9ba050839c/assets/img/fortran-logo.svg',
+      },
+      {
+        title: 'Haskell',
+        hex: '5D4F85',
+        source: 'https://wiki.haskell.org/Thompson-Wheeler_logo',
+      },
+      {
+        title: 'Rust',
+        hex: '000000',
+        source: 'https://www.rust-lang.org',
+        guidelines: 'https://www.rust-lang.org/policies/media-guide',
+        license: {
+          type: 'CC-BY-SA-4.0',
+        },
       },
     ],
   },
@@ -285,6 +325,36 @@ export const categories: CategoryType[] = [
         title: 'Slides',
         hex: 'E4637C',
         source: 'https://slides.com/about',
+      },
+    ],
+  },
+  {
+    title: 'Testing',
+    badges: [
+      {
+        title: 'Cypress',
+        hex: '17202C',
+        source: 'https://cypress.io',
+      },
+      {
+        title: 'Jest',
+        hex: 'C21325',
+        source: 'https://jestjs.io',
+      },
+      {
+        title: 'Vitest',
+        hex: '6E9F18',
+        source: 'https://vitest.dev',
+      },
+      {
+        title: 'Testing Library',
+        hex: 'E33332',
+        source: 'https://testing-library.com',
+      },
+      {
+        title: 'Puppeteer',
+        hex: '40B5A4',
+        source: 'https://pptr.dev',
       },
     ],
   },
@@ -591,6 +661,132 @@ export const categories: CategoryType[] = [
         title: 'Recoil',
         hex: '3578E5',
         source: 'https://recoiljs.org',
+      },
+    ],
+  },
+  {
+    title: 'Editors',
+    badges: [
+      {
+        title: 'Visual Studio Code',
+        hex: '007ACC',
+        source:
+          'https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg',
+      },
+      {
+        title: 'WebStorm',
+        hex: '000000',
+        source: 'https://www.jetbrains.com/company/brand/logos',
+        guidelines: 'https://www.jetbrains.com/company/brand',
+      },
+      {
+        title: 'Sublime Text',
+        hex: 'FF9800',
+        source: 'https://www.sublimetext.com',
+      },
+      {
+        title: 'Xcode',
+        hex: '147EFB',
+        source: 'https://developer.apple.com/develop',
+      },
+      {
+        title: 'Atom',
+        hex: '66595C',
+        source:
+          'https://commons.wikimedia.org/wiki/File:Atom_editor_logo.svg',
+      },
+    ],
+  },
+  // {
+  //   title: 'Code Styling',
+  //   badges: [
+  //     {
+  //       title: 'ESLint',
+  //       hex: '4B32C3',
+  //       source: 'https://eslint.org',
+  //     },
+  //     {
+  //       title: 'stylelint',
+  //       hex: '263238',
+  //       source:
+  //         'https://github.com/stylelint/stylelint/blob/1f7bbb2d189b3e27b42de25f2948e3e5eec1b759/identity/stylelint-icon-black.svg',
+  //     },
+  //     {
+  //       title: 'Prettier',
+  //       hex: 'F7B93E',
+  //       source:
+  //         'https://github.com/prettier/prettier-logo/blob/06997b307e0608ebee2044dafa0b9429d6b5a103/images/prettier-icon-clean-centred.svg',
+  //     },
+  //   ],
+  // },
+  {
+    title: 'Authorization',
+    badges: [
+      {
+        title: 'JSON Web Tokens',
+        hex: '000000',
+        source: 'https://jwt.io',
+      },
+      {
+        title: 'Auth0',
+        hex: 'EB5424',
+        source: 'https://auth0.com',
+      },
+      {
+        title: 'Authy',
+        hex: 'EC1C24',
+        source: 'https://authy.com',
+      },
+      {
+        title: 'Firebase',
+        hex: 'FFCA28',
+        source: 'https://firebase.google.com/brand-guidelines/',
+        guidelines: 'https://firebase.google.com/brand-guidelines/',
+      },
+      {
+        title: 'WebAuthn',
+        hex: '3423A6',
+        source:
+          'https://github.com/webauthn-open-source/webauthn-logos/tree/b21be672811eb4a5caadaba41044970cae299a55',
+        guidelines:
+          'https://github.com/webauthn-open-source/webauthn-logos',
+      },
+    ],
+  },
+  {
+    title: 'Crypto',
+    badges: [
+      {
+        title: 'Tether',
+        hex: '50AF95',
+        aliases: {
+          aka: ['USDt'],
+        },
+        source: 'https://tether.to/branding/',
+        guidelines: 'https://tether.to/branding/',
+      },
+      {
+        title: 'Ethereum',
+        hex: '3C3C3D',
+        source: 'https://ethereum.org/en/assets/',
+      },
+      {
+        title: 'Bitcoin',
+        hex: 'F7931A',
+        source: 'https://bitcoin.org',
+      },
+      {
+        title: 'Litecoin',
+        hex: 'A6A9AA',
+        source:
+          'https://litecoin-foundation.org/litecoin-branding-guidelines/',
+        guidelines:
+          'https://litecoin-foundation.org/litecoin-branding-guidelines/',
+      },
+      {
+        title: 'XRP',
+        hex: '25A768',
+        source: 'https://xrpl.org',
       },
     ],
   },
