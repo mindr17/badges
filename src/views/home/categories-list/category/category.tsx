@@ -36,18 +36,19 @@ export default function Category(props: Props): JSX.Element {
       <BadgeProductList category={category} />
       <button className={s.more} onClick={handleMoreClick}>
         {isMoreClicked ? (
-          <div>
-            Join{' '}
-            <a
-              className={s.telegram}
-              href='https://t.me/badges_chat'
-              target='_blank'
-            >
-              telegram
-            </a>{' '}
-            for more {title}!
-          </div>
+          <div>More {title} coming soon!</div>
         ) : (
+          // <div>
+          //   Join{' '}
+          //   <a
+          //     className={s.telegram}
+          //     href='https://t.me/badges_chat'
+          //     target='_blank'
+          //   >
+          //     telegram
+          //   </a>{' '}
+          //   for more {title}!
+          // </div>
           `More ${title}`
         )}
       </button>
