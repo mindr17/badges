@@ -13,7 +13,7 @@ const devConfig = {
   apiRoutesUrl: '',
 };
 const prodConfig = {
-  apiRoutesUrl: 'https://getbadges.vercel.app',
+  apiRoutesUrl: 'https://badges.bio',
 };
 
 export const config = {

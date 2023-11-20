@@ -1,17 +1,11 @@
 public/
-pages/
 src/
-middleware.ts
 
 package.json
 pnpm-lock.yaml
 
 tsconfig.json
 next.config.js
-postcss.config.js
-tailwind.config.js
-
-service-account.json
 
 Dockerfile
 .dockerignore
