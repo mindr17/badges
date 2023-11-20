@@ -46,6 +46,7 @@ export const {
   clearSelected,
 } = selectedSlice.actions;
 
-export const getSelected = (store: RootState) => store.selected;
+export const getSelected = (store: RootState) =>
+  store.selected.present;
 
 export default selectedSlice.reducer;

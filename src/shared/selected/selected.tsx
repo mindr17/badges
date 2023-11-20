@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react';
+import { ActionCreators } from 'redux-undo';
 
 import { copyMd } from '@/helpers/selected/copy-md';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
@@ -62,6 +63,12 @@ export default function Selected(): JSX.Element {
           </div>
         </div>
         <div className={s.controls}>
+          <div
+            className={s.control}
+            onClick={() => dispatch(ActionCreators.undo())}
+          >
+            Undo
+          </div>
           <div
             className={`${s.control} ${s.clear}`}
             onClick={() => dispatch(clearSelected())}
