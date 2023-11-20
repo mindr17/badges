@@ -1,9 +1,9 @@
-import image from '../../public/og.png';
-// import Image from 'next/image';
+import { Metadata } from 'next';
 
-// import Hero from '@/shared/hero/hero';
-// import Selected from '@/shared/selected/selected';
-// import CategoriesList from '@/views/home/categories-list/categories-list';
+import { config } from '@/config';
+import Home from '@/views/home/home';
+
+import image from '../../public/og.png';
 
 const title = 'Beautiful badges in a few clicks';
 const description =
@@ -12,6 +12,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  metadataBase: new URL(config.apiRoutesUrl),
   openGraph: {
     title,
     description,
@@ -22,9 +23,5 @@ export const metadata: Metadata = {
     ],
   },
 };
-
-import { Metadata } from 'next';
-
-import Home from '@/views/home/home';
 
 export default Home;
