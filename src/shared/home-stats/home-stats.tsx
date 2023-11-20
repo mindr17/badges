@@ -24,13 +24,11 @@ export default function HomeStats(): JSX.Element {
   }, [dispatch]);
 
   // const count = useAppSelector(getStats);
-  // console.log('count: ', count);
   // const response = await fetch(
   //   'https://api.mafia.game/badges_stats/copied_count?access_token='
   // );
 
   // const count = await response.json();
-  // console.log('count: ', count);
 
   const stats = [
     {

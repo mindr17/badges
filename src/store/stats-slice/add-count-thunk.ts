@@ -10,7 +10,6 @@ export const addCount = createAsyncThunk(
       // `/api?type=add_count&count=${countToAdd}`
       `${config.apiRoutesUrl}/api?type=add_count&count=${countToAdd}`
     );
-    console.log('response: ', response);
 
     const countData = await response.json();
     const count = countData.countData.data.copied_count;
