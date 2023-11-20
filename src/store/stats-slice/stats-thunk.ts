@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-export const getStats = createAsyncThunk(
-  'products/getStats',
+export const getCount = createAsyncThunk(
+  'stats/getCount',
   async (params) => {
     // const options = {
     //   body: {
@@ -11,9 +11,7 @@ export const getStats = createAsyncThunk(
     //   method: 'PATCH' as RequestMethod,
     // },
 
-    const response = await fetch(
-      'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
-    );
+    const response = await fetch('https://getbadges.vercel.app/api');
 
     const count = await response.json();
     console.log('count: ', count);

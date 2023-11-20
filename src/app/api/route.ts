@@ -12,7 +12,11 @@ export async function GET(request: Request) {
   // );
   // const product = await res.json();
 
-  const product = { count: 100 };
+  const response = await fetch(
+    'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
+  );
 
-  return Response.json({ product });
+  const countData = await response.json();
+
+  return Response.json({ countData });
 }

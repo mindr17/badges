@@ -15,7 +15,6 @@ const initialState: stateType = {
 
 export const selectedSlice = createSlice({
   name: 'selected',
-
   initialState,
   reducers: {
     initSelected: (state, action: PayloadAction<BadgeType[]>) => {

@@ -1,18 +1,28 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 
 import { formatNumberWithCommas } from '@/helpers/helpers';
 import {
   iconsStatsHtml,
   iconsTotalBadges,
-  packsBadgesCountHtml,
 } from '@/iconsHtml/iconsHtml';
 import Icon from '@/shared/icon/icon';
-import { useAppSelector } from '@/store/hooks';
-import { getStats } from '@/store/stats-slice/stats-thunk';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import { getCount } from '@/store/stats-slice/stats-thunk';
 
 import s from './home-stats.module.css';
 
-export default async function HomeStats(): JSX.Element {
+export default function HomeStats(): JSX.Element {
+  const dispatch = useAppDispatch();
+  const { count } = useAppSelector((state) => state.stats);
+
+  useEffect(() => {
+    dispatch(getCount());
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
+
   // const count = useAppSelector(getStats);
   // console.log('count: ', count);
   // const response = await fetch(
@@ -37,13 +47,13 @@ export default async function HomeStats(): JSX.Element {
     //   titleStyle: s.yellow,
     //   iconHtml: packsBadgesCountHtml,
     // },
-    // {
-    //   title: 'Badges grabbed',
-    //   count,
-    //   containerStyle: s.cities,
-    //   titleStyle: s.green,
-    //   iconHtml: iconsStatsHtml,
-    // },
+    {
+      title: 'Badges grabbed',
+      count,
+      containerStyle: s.cities,
+      titleStyle: s.green,
+      iconHtml: iconsStatsHtml,
+    },
   ];
 
   return (
