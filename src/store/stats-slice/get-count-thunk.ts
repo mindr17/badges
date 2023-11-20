@@ -5,7 +5,7 @@ export const getCount = createAsyncThunk(
   async () => {
     const response = await fetch(
       // 'https://getbadges.vercel.app/api?type=get_count'
-      `http://localhost:3000/api?type=get_count`
+      `/api?type=get_count`
     );
 
     const countData = await response.json();
