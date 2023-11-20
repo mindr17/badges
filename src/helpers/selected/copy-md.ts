@@ -7,9 +7,10 @@ export const copyMd = (badges: BadgeType[]) => {
 
       return `![${title}](https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'})\n`;
     })
-    .join('');
+    .join('')
+    .trim();
 
-  const markdownWithAd = `${markdown}\nMore at ![badges.bio](https://badges.bio)`;
+  const markdownWithAd = `${markdown}  \nMore at [badges.bio](https://badges.bio)`;
 
   navigator.clipboard.writeText(markdownWithAd);
 };
