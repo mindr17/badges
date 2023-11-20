@@ -12,7 +12,7 @@ export const getStats = createAsyncThunk(
     // },
 
     const response = await fetch(
-      'https://api.mafia.game/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
+      'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
     );
 
     const count = await response.json();
