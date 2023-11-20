@@ -47,5 +47,13 @@ export async function GET(request: Request) {
     return Response.json({ countData });
   }
 
+  if (type === 'db') {
+    const response = await fetch('../../badjes-db.json');
+    console.log('response: ', response);
+    const countData = await response.json();
+
+    return Response.json({ countData });
+  }
+
   return Response.json('error');
 }

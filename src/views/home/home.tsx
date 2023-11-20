@@ -1,6 +1,7 @@
 import Header from '@/shared/header/header';
 import Hero from '@/shared/hero/hero';
 import Pinned from '@/shared/pinined/pinned';
+import Search from '@/shared/search/search';
 import Selected from '@/shared/selected/selected';
 import CategoriesList from '@/views/home/categories-list/categories-list';
 
@@ -13,6 +14,7 @@ export default function Home(): JSX.Element {
       <Header />
       <Hero />
       <Selected />
+      <Search />
       <CategoriesList />
     </div>
   );
