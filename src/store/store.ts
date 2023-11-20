@@ -2,12 +2,16 @@ import { configureStore } from '@reduxjs/toolkit';
 import undoable from 'redux-undo';
 
 import selectedSlice from './selected-slice/selected-slice';
+import statsSlice from './stats-slice/stats-slice';
 
 const store = configureStore({
   reducer: {
     selected: undoable(selectedSlice, {
       limit: 10,
     }),
+  },
+  stats: {
+    stats: statsSlice,
   },
 });
 

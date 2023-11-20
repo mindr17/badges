@@ -7,10 +7,21 @@ import {
   packsBadgesCountHtml,
 } from '@/iconsHtml/iconsHtml';
 import Icon from '@/shared/icon/icon';
+import { useAppSelector } from '@/store/hooks';
+import { getStats } from '@/store/stats-slice/stats-thunk';
 
 import s from './home-stats.module.css';
 
-export default function HomeStats(): JSX.Element {
+export default async function HomeStats(): JSX.Element {
+  // const count = useAppSelector(getStats);
+  // console.log('count: ', count);
+  // const response = await fetch(
+  //   'https://api.mafia.game/badges_stats/copied_count?access_token='
+  // );
+
+  // const count = await response.json();
+  // console.log('count: ', count);
+
   const stats = [
     {
       title: 'Badges in library',
@@ -28,7 +39,7 @@ export default function HomeStats(): JSX.Element {
     // },
     // {
     //   title: 'Badges grabbed',
-    //   count: 291234234,
+    //   count,
     //   containerStyle: s.cities,
     //   titleStyle: s.green,
     //   iconHtml: iconsStatsHtml,
