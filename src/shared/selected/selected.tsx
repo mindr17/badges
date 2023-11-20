@@ -11,6 +11,7 @@ import {
   deleteFromSelected,
   getSelected,
 } from '@/store/selected-slice/selected-slice';
+import { addCount } from '@/store/stats-slice/add-count-thunk';
 
 import s from './selected.module.css';
 
@@ -22,6 +23,10 @@ export default function Selected(): JSX.Element {
   const handleCopyMd = () => {
     copyMd(selectedBadges);
     setMdCopied(true);
+
+    if (selectedBadges.length < 1) return;
+
+    dispatch(addCount(selectedBadges.length || 0));
   };
 
   useEffect(() => {

@@ -24,6 +24,12 @@ export default function Hero(): JSX.Element {
         <div className={s.description}>
           For Github profile, personal website, etc
         </div>
+        <div className={s.description}>
+          and join
+          <a className={s.telegram} href='' target='_blank'>
+            telegram chat!
+          </a>
+        </div>
         <div className={s.statsContainer}>
           {/* <Stats /> */}
           <HomeStats />

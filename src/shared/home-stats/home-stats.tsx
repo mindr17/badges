@@ -19,10 +19,7 @@ export default function HomeStats(): JSX.Element {
   const { count } = useAppSelector((state) => state.stats);
 
   useEffect(() => {
-    dispatch(addCount(100));
-    // dispatch(getCount());
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    dispatch(getCount());
   }, [dispatch]);
 
   // const count = useAppSelector(getStats);

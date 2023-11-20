@@ -8,16 +8,21 @@ export async function GET(request: Request) {
     );
 
     const countData = await response.json();
-    console.log('countData: ', countData);
 
     return Response.json({ countData });
   }
 
   if (type === 'add_count') {
-    console.log();
+    const oldResponse = await fetch(
+      'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
+    );
+
+    const oldCountData = await oldResponse.json();
+    const oldCount = oldCountData.data.copied_count;
+
     const count = searchParams.get('count');
 
-    const body = { copied_count: 100 + Number(count) };
+    const body = { copied_count: oldCount + Number(count) };
 
     // const response = await fetch(
     //   'https://api.mafia.game/items/badges_stats?access_token=hYdq47WCnLtr_P8sxiYdguRUXT6kQQ4b',
@@ -36,8 +41,6 @@ export async function GET(request: Request) {
         body: JSON.stringify(body),
       }
     );
-
-    console.log('response: ', response);
 
     const countData = await response.json();
 

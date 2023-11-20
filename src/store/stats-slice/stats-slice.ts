@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import { addCount } from './add-count-thunk';
 import { getCount } from './get-count-thunk';
 
 interface State {

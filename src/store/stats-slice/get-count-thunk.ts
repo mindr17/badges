@@ -1,11 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
+import { config } from '@/config';
+
 export const getCount = createAsyncThunk(
   'stats/getCount',
   async () => {
     const response = await fetch(
-      // 'https://getbadges.vercel.app/api?type=get_count'
-      `/api?type=get_count`
+      `${config.apiRoutesUrl}/api?type=get_count`
+      // `/api?type=get_count`
     );
 
     const countData = await response.json();

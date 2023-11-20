@@ -9,8 +9,12 @@ const baseConfig = {
   apiToken: '',
 };
 
-const devConfig = {};
-const prodConfig = {};
+const devConfig = {
+  apiRoutesUrl: '',
+};
+const prodConfig = {
+  apiRoutesUrl: 'https://getbadges.vercel.app',
+};
 
 export const config = {
   ...baseConfig,

@@ -67,3 +67,17 @@
 .statsContainer {
   padding-top: 16px;
 }
+
+.telegram {
+  display: flex;
+
+  padding-left: 8px;
+
+  font-weight: 700;
+  color: #e3861a;
+  text-decoration: underline dotted;
+}
+
+.telegram:hover {
+  color: #d49042;
+}
