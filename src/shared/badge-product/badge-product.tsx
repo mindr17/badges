@@ -74,9 +74,9 @@ export default function BadgeProduct(props: Props): JSX.Element {
           </div>
         </button>
       </div>
-      <button className={s.moreBtn}>
+      {/* <button className={s.moreBtn}>
         <Icon html={moreHtmlHorizontal} />
-      </button>
+      </button> */}
     </div>
   );
 }

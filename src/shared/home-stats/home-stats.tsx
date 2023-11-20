@@ -14,7 +14,7 @@ export default function HomeStats(): JSX.Element {
   const stats = [
     {
       title: 'Badges in library',
-      count: 2904,
+      count: 2500,
       containerStyle: s.clubs,
       titleStyle: s.red,
       iconHtml: iconsTotalBadges,
