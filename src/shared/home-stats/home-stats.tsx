@@ -2,21 +2,22 @@
 
 import React, { useEffect } from 'react';
 
-import { formatNumberWithCommas } from '@/helpers/helpers';
 import {
   iconsStatsHtml,
   iconsTotalBadges,
 } from '@/iconsHtml/iconsHtml';
 import Icon from '@/shared/icon/icon';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { addCount } from '@/store/stats-slice/add-count-thunk';
 import { getCount } from '@/store/stats-slice/get-count-thunk';
 
+import Counter from '../counter/counter';
 import s from './home-stats.module.css';
 
 export default function HomeStats(): JSX.Element {
   const dispatch = useAppDispatch();
-  const { count } = useAppSelector((state) => state.stats);
+  const { count, previousCount } = useAppSelector(
+    (state) => state.stats
+  );
 
   useEffect(() => {
     dispatch(getCount());
@@ -65,7 +66,11 @@ export default function HomeStats(): JSX.Element {
           <div className={`${s.link} ${containerStyle}`} key={index}>
             <div className={`${s.h3} ${titleStyle}`}>{title}</div>
             <div className={s.count}>
-              {formatNumberWithCommas(count)}
+              <Counter
+                from={title === 'Badges grabbed' ? previousCount : 0}
+                to={count}
+              />
+              {/* {formatNumberWithCommas(count)} */}
             </div>
             <div className={s.icon}>
               <Icon html={iconHtml} />

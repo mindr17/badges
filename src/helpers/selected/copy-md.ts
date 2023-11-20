@@ -5,7 +5,7 @@ export const copyMd = (badges: BadgeType[]) => {
     .map((badge) => {
       const { title, hex } = badge;
 
-      return `![${title}](https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'})`;
+      return `![${title}](https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'})\n`;
     })
     .join('');
 

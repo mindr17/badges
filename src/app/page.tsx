@@ -12,7 +12,8 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL(config.apiRoutesUrl),
+  // metadataBase: new URL(config.apiRoutesUrl),
+  metadataBase: new URL('https://getbadges.vercel.app'),
   openGraph: {
     title,
     description,
