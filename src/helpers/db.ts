@@ -366,4 +366,232 @@ export const categories: CategoryType[] = [
       },
     ],
   },
+  {
+    title: 'Build tools',
+    badges: [
+      {
+        title: 'Webpack',
+        hex: '8DD6F9',
+        source: 'https://webpack.js.org/branding',
+        guidelines: 'https://webpack.js.org/branding',
+        license: {
+          type: 'custom',
+          url: 'https://js.foundation/about/governance/trademark-policy',
+        },
+      },
+      {
+        title: 'Vite',
+        hex: '646CFF',
+        source: 'https://vitejs.dev',
+      },
+      {
+        title: 'Turbo',
+        hex: '5CD8E5',
+        source: 'https://turbo.hotwired.dev',
+      },
+      {
+        title: 'gulp',
+        hex: 'CF4647',
+        source:
+          'https://github.com/gulpjs/artwork/blob/4e14158817ac88e9a5c02b3b307e6f630fe222fb/gulp-white-text.svg',
+        guidelines: 'https://github.com/gulpjs/artwork',
+        license: {
+          type: 'CC0-1.0',
+        },
+      },
+      {
+        title: 'Grunt',
+        hex: 'FAA918',
+        source:
+          'https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg',
+        guidelines:
+          'https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md',
+      },
+    ],
+  },
+  {
+    title: 'API',
+    badges: [
+      {
+        title: 'GraphQL',
+        hex: 'E10098',
+        source: 'https://graphql.org/brand',
+        guidelines: 'https://graphql.org/brand',
+      },
+      {
+        title: 'Apollo GraphQL',
+        hex: '311C87',
+        source: 'https://www.apollographql.com',
+      },
+      {
+        title: 'Swagger',
+        hex: '85EA2D',
+        source:
+          'https://swagger.io/swagger/media/assets/images/swagger_logo.svg',
+      },
+      {
+        title: 'tRPC',
+        hex: '2596BE',
+        source:
+          'https://github.com/trpc/trpc/blob/e0df4a2d5b498dd953a65901e04915c6e3f7ecc5/www/static/img/logo-no-text.svg',
+      },
+      {
+        title: 'Hasura',
+        hex: '1EB4D4',
+        source:
+          'https://github.com/hasura/graphql-engine/blob/5e2f5d470cdc2a7e59db7a3d5e94475a00bb2ac6/docs/static/img/logo.svg',
+      },
+    ],
+  },
+  {
+    title: 'Headless CMS',
+    badges: [
+      {
+        title: 'Strapi',
+        hex: '4945FF',
+        source:
+          'https://handbook.strapi.io/strapi-brand-book-2022/strapi-logo',
+        guidelines:
+          'https://handbook.strapi.io/strapi-brand-book-2022',
+      },
+      {
+        title: 'Ghost',
+        hex: '15171A',
+        source:
+          'https://github.com/TryGhost/Admin/blob/e3e1fa3353767c3729b1658ad42cc35f883470c5/public/assets/icons/icon.svg',
+        guidelines: 'https://ghost.org/docs/logos/',
+      },
+      {
+        title: 'Directus',
+        hex: '263238',
+        source: 'https://directus.io',
+      },
+      {
+        title: 'Sanity',
+        hex: 'F03E2F',
+        source:
+          'https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx',
+        license: {
+          type: 'MIT',
+        },
+      },
+      {
+        title: 'Keystone',
+        hex: '166BFF',
+        source: 'https://keystonejs.com',
+      },
+    ],
+  },
+  {
+    title: 'CMS',
+    badges: [
+      {
+        title: 'Drupal',
+        hex: '0678BE',
+        source: 'https://www.drupal.org/about/media-kit/logos',
+      },
+      {
+        title: 'WordPress',
+        hex: '21759B',
+        source: 'https://wordpress.org/about/logos',
+        guidelines:
+          'https://wordpressfoundation.org/trademark-policy',
+      },
+      {
+        title: 'Joomla',
+        hex: '5091CD',
+        source:
+          'https://docs.joomla.org/Joomla:Brand_Identity_Elements/Official_Logo',
+        guidelines:
+          'https://docs.joomla.org/Joomla:Brand_Identity_Elements',
+      },
+      {
+        title: 'Craft CMS',
+        hex: 'E5422B',
+        source: 'https://craftcms.com/brand-resources',
+      },
+      {
+        title: 'October CMS',
+        hex: 'DB6A26',
+        source: 'https://octobercms.com',
+      },
+    ],
+  },
+  {
+    title: 'Databases',
+    badges: [
+      {
+        title: 'MongoDB',
+        hex: '47A248',
+        source: 'https://www.mongodb.com/pressroom',
+      },
+      {
+        title: 'MySQL',
+        hex: '4479A1',
+        source: 'https://www.mysql.com/about/legal/logos.html',
+        guidelines: 'https://www.mysql.com/about/legal/logos.html',
+      },
+      {
+        title: 'PostgreSQL',
+        hex: '4169E1',
+        source: 'https://wiki.postgresql.org/wiki/Logo',
+        guidelines:
+          'https://www.postgresql.org/about/policies/trademarks/',
+      },
+      {
+        title: 'SQLite',
+        hex: '003B57',
+        source:
+          'https://github.com/sqlite/sqlite/blob/43e862723ec680542ca6f608f9963c0993dd7324/art/sqlite370.eps',
+      },
+      {
+        title: 'Redis',
+        hex: 'DC382D',
+        source: 'https://www.redislabs.com/brand-guidelines/',
+        guidelines: 'https://www.redislabs.com/brand-guidelines/',
+      },
+    ],
+  },
+  {
+    title: 'State management',
+    badges: [
+      {
+        title: 'Redux',
+        hex: '764ABC',
+        source:
+          'https://github.com/reduxjs/redux/tree/8ad084251a5b3e4617157fc52795b6284e68bc1e/logo',
+      },
+      {
+        title: 'Redux-Saga',
+        hex: '999999',
+        source:
+          'https://github.com/redux-saga/redux-saga/blob/9d2164946f402e594a0dfe453c6d20fb6f14858f/logo/3840/Redux-Saga-Logo.png',
+      },
+      {
+        title: 'MobX',
+        hex: 'FF9955',
+        source:
+          'https://github.com/mobxjs/mobx/blob/248e25e37af31c2e71ff452bc662a85816fa40d8/docs/assets/mobservable.svg',
+      },
+      {
+        title: 'ReactiveX',
+        hex: 'B7178C',
+        source:
+          'https://github.com/ReactiveX/rxjs/blob/ee6ababb9fa75f068ac2122e956ff4e449604c59/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg',
+        aliases: {
+          dup: [
+            {
+              title: 'RxJS',
+              hex: 'D81B60',
+            },
+          ],
+        },
+      },
+      {
+        title: 'Recoil',
+        hex: '3578E5',
+        source: 'https://recoiljs.org',
+      },
+    ],
+  },
 ];
