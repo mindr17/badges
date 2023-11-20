@@ -9,5 +9,7 @@ export const copyMd = (badges: BadgeType[]) => {
     })
     .join('');
 
-  navigator.clipboard.writeText(markdown);
+  const markdownWithAd = `${markdown}\nMore at ![badges.bio](https://badges.bio)`;
+
+  navigator.clipboard.writeText(markdownWithAd);
 };

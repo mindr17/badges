@@ -250,5 +250,120 @@ export const categories: CategoryType[] = [
       },
     ],
   },
-  // { title: 'Productivity' },
+  {
+    title: 'Productivity',
+    badges: [
+      {
+        title: 'Jira',
+        hex: '0052CC',
+        source: 'https://atlassian.design/resources/logo-library',
+        guidelines: 'https://atlassian.design/foundations/logos/',
+      },
+      {
+        title: 'Notion',
+        hex: '000000',
+        source: 'https://www.notion.so',
+      },
+      {
+        title: 'Miro',
+        hex: '050038',
+        source: 'https://miro.com',
+      },
+      {
+        title: 'Microsoft Visio',
+        hex: '3955A3',
+        source:
+          'https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products',
+        guidelines:
+          'https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks',
+        license: {
+          type: 'custom',
+          url: 'https://aka.ms/fluentui-assets-license',
+        },
+      },
+      {
+        title: 'Slides',
+        hex: 'E4637C',
+        source: 'https://slides.com/about',
+      },
+    ],
+  },
+  {
+    title: 'Operting systems',
+    badges: [
+      {
+        title: 'Ubuntu',
+        hex: 'E95420',
+        source: 'https://design.ubuntu.com/resources',
+        guidelines: 'https://design.ubuntu.com/brand',
+      },
+      {
+        title: 'macOS',
+        hex: '000000',
+        source:
+          'https://commons.wikimedia.org/wiki/File:MacOS_wordmark_(2017).svg',
+      },
+      {
+        title: 'Windows',
+        hex: '0078D4',
+        source:
+          'https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg',
+        guidelines:
+          'https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq',
+      },
+      {
+        title: 'Red Hat',
+        hex: 'EE0000',
+        source:
+          'https://www.redhat.com/en/about/brand/new-brand/details',
+      },
+      {
+        title: 'Kali Linux',
+        hex: '557C94',
+        source: 'https://www.kali.org/docs/policy/trademark/',
+        guidelines: 'https://www.kali.org/docs/policy/trademark/',
+      },
+    ],
+  },
+  {
+    title: 'Version control',
+    badges: [
+      {
+        title: 'Git',
+        hex: 'F05032',
+        source: 'https://git-scm.com/downloads/logos',
+        license: {
+          type: 'CC-BY-3.0',
+        },
+      },
+      {
+        title: 'Mercurial',
+        hex: '999999',
+        source: 'https://www.mercurial-scm.org/hg-logo/',
+        guidelines: 'https://www.mercurial-scm.org/hg-logo/',
+        license: {
+          type: 'GPL-2.0-or-later',
+        },
+      },
+      {
+        title: 'GitHub',
+        hex: '181717',
+        source: 'https://github.com/logos',
+        guidelines: 'https://github.com/logos',
+      },
+      {
+        title: 'Bitbucket',
+        hex: '0052CC',
+        source: 'https://atlassian.design/resources/logo-library',
+        guidelines: 'https://atlassian.design/foundations/logos',
+      },
+      {
+        title: 'GitLab',
+        hex: 'FC6D26',
+        source: 'https://about.gitlab.com/press/press-kit/',
+        guidelines:
+          'https://about.gitlab.com/handbook/marketing/corporate-marketing/brand-activation/trademark-guidelines/',
+      },
+    ],
+  },
 ];
