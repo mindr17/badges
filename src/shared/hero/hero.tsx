@@ -26,7 +26,11 @@ export default function Hero(): JSX.Element {
         </div>
         <div className={s.description}>
           and join
-          <a className={s.telegram} href='' target='_blank'>
+          <a
+            className={s.telegram}
+            href='https://t.me/badges_chat'
+            target='_blank'
+          >
             telegram chat!
           </a>
         </div>
