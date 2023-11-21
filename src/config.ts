@@ -1,5 +1,6 @@
 const subDomain = '';
 const domain = '';
+export const FRONTEND_URL = 'https://badges.bio';
 
 const baseConfig = {
   subDomain,
@@ -13,7 +14,7 @@ const devConfig = {
   apiRoutesUrl: '',
 };
 const prodConfig = {
-  apiRoutesUrl: 'https://badges.bio',
+  apiRoutesUrl: FRONTEND_URL,
 };
 
 export const config = {

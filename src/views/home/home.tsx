@@ -1,5 +1,5 @@
-import Header from '@/shared/header/header';
 import Hero from '@/shared/hero/hero';
+import MoreLink from '@/shared/more-link/more-link';
 import Pinned from '@/shared/pinined/pinned';
 import Search from '@/shared/search/search';
 import Selected from '@/shared/selected/selected';
@@ -11,11 +11,11 @@ export default function Home(): JSX.Element {
   return (
     <div className={s.container}>
       <Pinned />
-      <Header />
       <Hero />
       <Selected />
       <Search />
       <CategoriesList />
+      {/* <MoreLink /> */}
     </div>
   );
 }

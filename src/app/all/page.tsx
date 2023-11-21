@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
 import { FRONTEND_URL } from '@/config';
-import Home from '@/views/home/home';
+import All from '@/views/all/all';
 
-import image from '../../public/og.png';
+import image from '../../../public/og.png';
 
 const title = 'Beautiful badges in a few clicks';
 const description =
@@ -24,4 +24,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default Home;
+export default All;
