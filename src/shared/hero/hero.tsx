@@ -9,10 +9,12 @@ export default function Hero(): JSX.Element {
     <div className={s.container}>
       <div className={s.heroImgContainer}>
         <Image
-          alt={'badges'}
+          alt='badges hero image'
           className={s.heroImg}
           fill
           priority
+          quality={10}
+          sizes='100vw'
           src={'/hero.jpg'}
         />
         <div className={s.heroBottomShadow}></div>
