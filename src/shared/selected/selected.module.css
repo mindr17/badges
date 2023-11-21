@@ -99,3 +99,7 @@
 .copyMarkdown:hover {
   background-color: var(--green-hover);
 }
+
+.undo:hover {
+  background-color: var(--grey-hover);
+}

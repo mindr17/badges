@@ -76,7 +76,7 @@ export default function Selected(): JSX.Element {
         </div>
         <div className={s.controls}>
           <div
-            className={s.control}
+            className={`${s.control} ${s.undo}`}
             onClick={() => dispatch(ActionCreators.undo())}
           >
             Undo
