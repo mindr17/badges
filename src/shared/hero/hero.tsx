@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import HomeStats from '@/shared/home-stats/home-stats';
 
+import heroImg from '../../../public/hero.jpg';
 import s from './hero.module.css';
 
 export default function Hero(): JSX.Element {
@@ -12,9 +13,11 @@ export default function Hero(): JSX.Element {
           alt='badges hero image'
           className={s.heroImg}
           fill
+          priority
           quality={10}
-          sizes='20vw'
-          src={'/hero.jpg'}
+          sizes='(max-width: 768px) 50vw,
+                100vw'
+          src={heroImg}
         />
         <div className={s.heroBottomShadow}></div>
       </div>
