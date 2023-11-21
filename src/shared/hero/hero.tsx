@@ -12,9 +12,8 @@ export default function Hero(): JSX.Element {
           alt='badges hero image'
           className={s.heroImg}
           fill
-          priority
           quality={10}
-          sizes='100vw'
+          sizes='20vw'
           src={'/hero.jpg'}
         />
         <div className={s.heroBottomShadow}></div>
