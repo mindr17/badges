@@ -26,7 +26,7 @@ export default function CategoriesList(): JSX.Element {
           className={`${s.loadMore} ${s.allLoaded}`}
           onClick={() =>
             setCategoriesCount(
-              (prevCategoriesCount) => prevCategoriesCount + 4
+              (prevCategoriesCount) => prevCategoriesCount + 8
             )
           }
         >
