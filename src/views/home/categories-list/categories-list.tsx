@@ -8,7 +8,7 @@ import Category from '@/views/home/categories-list/category/category';
 import s from './categories-list.module.css';
 
 export default function CategoriesList(): JSX.Element {
-  const [categoriesCount, setCategoriesCount] = useState<number>(6);
+  const [categoriesCount, setCategoriesCount] = useState<number>(8);
   const categoriesSliced = categories.slice(0, categoriesCount);
   const isAllLoaded = categoriesSliced.length === categories.length;
 
