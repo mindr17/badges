@@ -39,19 +39,9 @@ export const categories: CategoryType[] = [
         },
       },
       {
-        title: 'Svelte',
-        hex: 'FF3E00',
-        source:
-          'https://github.com/sveltejs/branding/blob/c4dfca6743572087a6aef0e109ffe3d95596e86a/svelte-logo.svg',
-        aliases: {
-          dup: [
-            {
-              title: 'Sapper',
-              hex: '159497',
-              source: 'https://sapper.svelte.dev',
-            },
-          ],
-        },
+        title: 'Next.js',
+        hex: '000000',
+        source: 'https://nextjs.org',
       },
       {
         title: 'Astro',
