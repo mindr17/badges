@@ -1,13 +1,13 @@
 export type BadgeType = {
-  id?: string;
+  id: string;
   title: string;
   hex: string;
   source: string;
-  guidelines?: string;
-  license?: {
-    type: string;
-  };
-  aliases?: unknown;
+  // guidelines?: string;
+  // license?: {
+  //   type: string;
+  // };
+  // aliases?: unknown;
 };
 
 export type CategoryType = {

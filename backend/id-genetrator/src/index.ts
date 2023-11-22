@@ -5,7 +5,9 @@ const main = async () => {
   // const data = await import('./badges-db.json');
   const { icons } = data;
   const newIcons = icons.map((icon, index) => ({
-    ...icon,
+    source: icon.source,
+    title: icon.title,
+    hex: icon.hex,
     id: index,
   }));
 
