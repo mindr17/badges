@@ -1,6 +1,8 @@
 'use client';
 
 /* eslint-disable @next/next/no-img-element */
+import { DragDropContext, Draggable } from '@hello-pangea/dnd';
+import { DropResult } from '@types/react-beautiful-dnd';
 import { useEffect, useState } from 'react';
 import { ActionCreators } from 'redux-undo';
 
@@ -14,6 +16,7 @@ import {
 } from '@/store/selected-slice/selected-slice';
 import { addCount } from '@/store/stats-slice/add-count-thunk';
 
+import { StrictModeDroppable } from '../droppable-fix/droppble-fix';
 import s from './selected.module.css';
 
 export default function Selected(): JSX.Element {
@@ -51,40 +54,66 @@ export default function Selected(): JSX.Element {
     };
   }, [mdCopied]);
 
+  const handleOnDragEnd = (result: DropResult) => {
+    const { destination } = result;
+
+    if (!destination) return;
+
+    const { index } = destination;
+    console.log('index: ', index);
+
+    // dispatch(updateSetOfTasks(resToApiDest));
+  };
+
   return (
     <div className={s.container}>
       <h2 className={s.h2}>Selected badges</h2>
-      {/* <div className={s.topControls}></div> */}
       <div className={s.wrapper}>
         <div className={s.selected}>
-          <div className={s.badgesList}>
-            {/* {badgesImages.map((imgSrc, index) => (
-              <img
-                alt={''}
-                className={s.imgStandard}
-                key={index}
-                src={imgSrc}
-              />
-            ))} */}
-            {selectedBadges && selectedBadges.length > 0
-              ? selectedBadges?.map((badge, index) => {
-                  const { title, hex } = badge;
+          <DragDropContext onDragEnd={handleOnDragEnd}>
+            <StrictModeDroppable
+              direction='horizontal'
+              droppableId='droppable'
+            >
+              {(provided, snapshot) => (
+                <ul
+                  {...provided.droppableProps}
+                  className={s.badgesList}
+                  ref={provided.innerRef}
+                >
+                  {selectedBadges && selectedBadges.length > 0
+                    ? selectedBadges?.map((badge, index) => {
+                        const { title, hex, id } = badge;
 
-                  return (
-                    <img
-                      alt={title}
-                      className={s.imgStandard}
-                      key={index}
-                      onClick={() =>
-                        dispatch(deleteFromSelected(badge))
-                      }
-                      src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
-                      suppressHydrationWarning
-                    />
-                  );
-                })
-              : 'Start by clicking on badges below'}
-          </div>
+                        return (
+                          <Draggable
+                            draggableId={id || ''}
+                            index={index}
+                            key={id}
+                          >
+                            {(provided, snapshot) => (
+                              <img
+                                ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                                alt={title}
+                                className={s.imgStandard}
+                                onClick={() =>
+                                  dispatch(deleteFromSelected(badge))
+                                }
+                                src={`https://img.shields.io/badge/${title}-${hex}?style=for-the-badge&logo=${title}&logoColor=${'FFF'}`}
+                                suppressHydrationWarning
+                              />
+                            )}
+                          </Draggable>
+                        );
+                      })
+                    : 'Start by clicking on badges below'}
+                  {provided.placeholder}
+                </ul>
+              )}
+            </StrictModeDroppable>
+          </DragDropContext>
         </div>
         <div className={s.controls}>
           <div
@@ -99,7 +128,6 @@ export default function Selected(): JSX.Element {
           >
             Clear
           </div>
-          {/* <div className={s.control}>Copy HTML</div> */}
           <button
             className={`${s.control} ${s.copyHtml}`}
             onClick={handleCopyHtml}

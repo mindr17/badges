@@ -17,7 +17,7 @@ export const selectedSlice = createSlice({
   name: 'selected',
   initialState,
   reducers: {
-    initSelected: (state, action: PayloadAction<BadgeType[]>) => {
+    setSelected: (state, action: PayloadAction<BadgeType[]>) => {
       state.selected = action.payload;
     },
     addToSelected: (state, action: PayloadAction<BadgeType>) => {
@@ -44,7 +44,7 @@ export const selectedSlice = createSlice({
 export const {
   addToSelected,
   deleteFromSelected,
-  initSelected,
+  setSelected,
   clearSelected,
 } = selectedSlice.actions;
 
