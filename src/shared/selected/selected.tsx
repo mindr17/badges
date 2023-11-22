@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react';
 import { ActionCreators } from 'redux-undo';
 
+import { copyHtml } from '@/helpers/selected/copy-html';
 import { copyMd } from '@/helpers/selected/copy-md';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import {
@@ -19,6 +20,7 @@ export default function Selected(): JSX.Element {
   const dispatch = useAppDispatch();
   const selectedBadges = useAppSelector(getSelected).selected;
   const [mdCopied, setMdCopied] = useState(false);
+  const [htmlCopied, setHtmlCopied] = useState(false);
 
   const handleCopyMd = () => {
     copyMd(selectedBadges);
@@ -29,9 +31,19 @@ export default function Selected(): JSX.Element {
     dispatch(addCount(selectedBadges.length || 0));
   };
 
+  const handleCopyHtml = () => {
+    copyHtml(selectedBadges);
+    setHtmlCopied(true);
+
+    if (selectedBadges.length < 1) return;
+
+    dispatch(addCount(selectedBadges.length || 0));
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setMdCopied(false);
+      setHtmlCopied(false);
     }, 2000);
 
     return () => {
@@ -88,12 +100,18 @@ export default function Selected(): JSX.Element {
             Clear
           </div>
           {/* <div className={s.control}>Copy HTML</div> */}
-          <div
+          <button
+            className={`${s.control} ${s.copyHtml}`}
+            onClick={handleCopyHtml}
+          >
+            {htmlCopied ? 'Copied!' : 'Copy Html'}
+          </button>
+          <button
             className={`${s.control} ${s.copyMarkdown}`}
             onClick={handleCopyMd}
           >
             {mdCopied ? 'Copied!' : 'Copy Markdown'}
-          </div>
+          </button>
         </div>
       </div>
     </div>

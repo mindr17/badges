@@ -78,6 +78,9 @@
 
   padding: 16px;
 
+  font-size: 20px;
+  font-weight: 700;
+
   background-color: var(--grey);
   border-radius: 8px;
 }
@@ -92,7 +95,7 @@
 }
 
 .copyMarkdown {
-  width: 170px;
+  width: 200px;
   background-color: var(--green);
 }
 
@@ -102,4 +105,13 @@
 
 .undo:hover {
   background-color: var(--grey-hover);
+}
+
+.copyHtml {
+  background-color: var(--grey);
+  border: 2px solid var(--green);
+}
+
+.copyHtml:hover {
+  background-color: var(--green-hover);
 }
