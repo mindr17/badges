@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+
+  color: #fff;
+  z-index: 10;
+}
+
+.link {
+  padding: 16px;
+
+  font-size: 24px;
+
+  opacity: 1;
+  background-color: #2f3031;
+  border-radius: 16px;
+}

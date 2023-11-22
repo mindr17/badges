@@ -16,6 +16,7 @@ export default async function AllBadges(): Promise<JSX.Element> {
 
   return (
     <div className={s.container}>
+      <h2 className={s.h2}>All badges</h2>
       <AllBadgesList badges={allBadges.icons} />
     </div>
   );

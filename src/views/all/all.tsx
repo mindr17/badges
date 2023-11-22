@@ -1,3 +1,4 @@
+import BackButton from '@/shared/back-button/back-button';
 import Pinned from '@/shared/pinined/pinned';
 import Search from '@/shared/search/search';
 import Selected from '@/shared/selected/selected';
@@ -9,6 +10,7 @@ export default function All(): JSX.Element {
   return (
     <div className={s.container}>
       {/* <Header /> */}
+      <BackButton />
       <Pinned />
       <div className={s.smallHero}></div>
       <Selected />
