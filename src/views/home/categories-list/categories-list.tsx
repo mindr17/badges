@@ -9,29 +9,9 @@ import s from './categories-list.module.css';
 
 export default function CategoriesList(): JSX.Element {
   const [categoriesCount, setCategoriesCount] = useState<number>(8);
-  const categoriesWithIds = categories.map(
-    (category, categoryIndex) => {
-      return {
-        title: category.title,
-        badges: category.badges.map((badge, index) => {
-          const { title, hex, source } = badge;
 
-          return {
-            id: `${categoryIndex}${index}`,
-            title,
-            hex,
-            source,
-          };
-        }),
-      };
-    }
-  );
-  const categoriesSliced = categoriesWithIds.slice(
-    0,
-    categoriesCount
-  );
-  const isAllLoaded =
-    categoriesSliced.length === categoriesWithIds.length;
+  const categoriesSliced = categories.slice(0, categoriesCount);
+  const isAllLoaded = categoriesSliced.length === categories.length;
 
   const loadMoreItems = () =>
     setCategoriesCount(
