@@ -36,7 +36,7 @@ export default function Category(props: Props): JSX.Element {
       <BadgeProductList category={category} />
       <button className={s.more} onClick={handleMoreClick}>
         {isMoreClicked ? (
-          <div>More {title} coming soon!</div>
+          <div>Use search for more {title}</div>
         ) : (
           `More ${title}`
         )}
