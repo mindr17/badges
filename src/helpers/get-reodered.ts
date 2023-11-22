@@ -1,4 +1,4 @@
-export function changeItemIndex(
+export function getReodered(
   arr: unknown[],
   fromIndex: number,
   toIndex: number

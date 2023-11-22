@@ -2,21 +2,22 @@
 
 /* eslint-disable @next/next/no-img-element */
 import { DragDropContext, Draggable } from '@hello-pangea/dnd';
-import { DropResult } from '@types/react-beautiful-dnd';
 import { useEffect, useState } from 'react';
 import { ActionCreators } from 'redux-undo';
 
+import { getReodered } from '@/helpers/get-reodered';
 import { copyHtml } from '@/helpers/selected/copy-html';
 import { copyMd } from '@/helpers/selected/copy-md';
+import { StrictModeDroppable } from '@/shared/droppable-fix/droppble-fix';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import {
   clearSelected,
   deleteFromSelected,
   getSelected,
+  setSelected,
 } from '@/store/selected-slice/selected-slice';
 import { addCount } from '@/store/stats-slice/add-count-thunk';
 
-import { StrictModeDroppable } from '../droppable-fix/droppble-fix';
 import s from './selected.module.css';
 
 export default function Selected(): JSX.Element {
@@ -54,15 +55,18 @@ export default function Selected(): JSX.Element {
     };
   }, [mdCopied]);
 
-  const handleOnDragEnd = (result: DropResult) => {
-    const { destination } = result;
+  const handleOnDragEnd = (result) => {
+    const { source, destination } = result;
 
     if (!destination) return;
 
-    const { index } = destination;
-    console.log('index: ', index);
+    const newSelected = getReodered(
+      selectedBadges,
+      source.index,
+      destination.index
+    );
 
-    // dispatch(updateSetOfTasks(resToApiDest));
+    dispatch(setSelected(newSelected));
   };
 
   return (
