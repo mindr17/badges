@@ -16,12 +16,13 @@ export default function Home(): JSX.Element {
       <Hero />
       <Selected />
       <Search />
+      {/* <Popular /> */}
       <CategoriesList />
       {/* <MoreLink /> */}
-      <ButtonPrimary
+      {/* <ButtonPrimary
         href={'/all'}
         title={'2500 badges alphabetically'}
-      />
+      /> */}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import BackButton from '@/shared/back-button/back-button';
+import Pagination from '@/shared/pagination/pagination';
 import Pinned from '@/shared/pinined/pinned';
 import Search from '@/shared/search/search';
 import Selected from '@/shared/selected/selected';
@@ -15,6 +16,7 @@ export default function All(): JSX.Element {
       <div className={s.smallHero}></div>
       <Selected />
       <Search />
+      {/* <Pagination page={0} /> */}
       <AllBadges />
       {/* <MoreLink /> */}
     </div>

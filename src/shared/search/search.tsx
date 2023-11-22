@@ -28,10 +28,11 @@ export default function Search(): JSX.Element {
     fetchData().then((data) =>
       setAllBadges(() => {
         const badgesFromDb = data?.default?.icons;
-        const badges = badgesFromDb.map((badge) => {
+        const badges = badgesFromDb.map((badge, index) => {
           return {
             ...badge,
-            id: uuidv4(),
+            // id: uuidv4(),
+            id: index.toString(),
           };
         });
 
