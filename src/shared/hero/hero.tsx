@@ -29,7 +29,7 @@ export default function Hero(): JSX.Element {
           For Github profile, personal website, etc
         </div>
         <div className={s.description}>
-          and join
+          then you can join
           <a
             className={s.telegram}
             href='https://t.me/badges_chat'

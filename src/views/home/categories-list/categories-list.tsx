@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 import { categories } from '@/helpers/db';
@@ -30,9 +31,7 @@ export default function CategoriesList(): JSX.Element {
             )
           }
         >
-          {isAllLoaded
-            ? 'All categories loaded'
-            : 'Load more categories'}
+          Load more categories
         </button>
       )}
     </div>
