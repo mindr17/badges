@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-// import { config } from '@/config';
 import { BadgeType } from '@/types/types';
 
 import BadgeProduct from '../badge-product/badge-product';
@@ -25,7 +25,19 @@ export default function Search(): JSX.Element {
   const [debouncedSting, setDebouncedString] = useState('');
 
   useEffect(() => {
-    fetchData().then((data) => setAllBadges(data?.default?.icons));
+    fetchData().then((data) =>
+      setAllBadges(() => {
+        const badgesFromDb = data?.default?.icons;
+        const badges = badgesFromDb.map((badge) => {
+          return {
+            ...badge,
+            id: uuidv4(),
+          };
+        });
+
+        return badges;
+      })
+    );
 
     const escHandler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
