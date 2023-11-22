@@ -6,7 +6,7 @@ export type BadgeType = {
   license?: {
     type: string;
   };
-  aliases?: string;
+  aliases?: unknown;
 };
 
 export type CategoryType = {

@@ -1,7 +1,5 @@
-// import allBadges from '@/badges-db.json';
-import BadgeProduct from '@/shared/badge-product/badge-product';
-
 import s from './all-badges.module.css';
+import AllBadgesList from './all-badges-list/all-badges-list';
 
 const fetchData = async () => {
   const data = await import('../../../badges-db.json');
@@ -18,15 +16,7 @@ export default async function AllBadges(): Promise<JSX.Element> {
 
   return (
     <div className={s.container}>
-      {allBadges.icons.map((icon, index) => {
-        if (index > 100) return;
-
-        return (
-          <div className={s.wrapper} key={index}>
-            <BadgeProduct badge={icon} />
-          </div>
-        );
-      })}
+      <AllBadgesList badges={allBadges.icons} />
     </div>
   );
 }

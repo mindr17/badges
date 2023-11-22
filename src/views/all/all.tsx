@@ -1,4 +1,3 @@
-import Header from '@/shared/header/header';
 import Pinned from '@/shared/pinined/pinned';
 import Search from '@/shared/search/search';
 import Selected from '@/shared/selected/selected';
