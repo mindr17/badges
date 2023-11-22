@@ -1,3 +1,4 @@
+import ButtonPrimary from '@/shared/button-primary/button-primary';
 import Header from '@/shared/header/header';
 import Hero from '@/shared/hero/hero';
 import Pinned from '@/shared/pinined/pinned';
@@ -17,6 +18,10 @@ export default function Home(): JSX.Element {
       <Search />
       <CategoriesList />
       {/* <MoreLink /> */}
+      <ButtonPrimary
+        href={'/all'}
+        title={'2500 badges alphabetically'}
+      />
     </div>
   );
 }
