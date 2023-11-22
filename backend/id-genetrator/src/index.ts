@@ -8,7 +8,7 @@ const main = async () => {
     source: icon.source,
     title: icon.title,
     hex: icon.hex,
-    id: index,
+    id: index.toString(),
   }));
 
   fs.writeFile('newDb.json', JSON.stringify({ icons: newIcons }));
