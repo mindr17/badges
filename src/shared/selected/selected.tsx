@@ -53,7 +53,7 @@ export default function Selected(): JSX.Element {
     return () => {
       clearTimeout(timer);
     };
-  }, [mdCopied]);
+  }, [mdCopied, htmlCopied]);
 
   const handleOnDragEnd = (result) => {
     const { source, destination } = result;
