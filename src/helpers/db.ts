@@ -747,6 +747,17 @@ export const categories: CategoryType[] = [
     title: 'Crypto',
     badges: [
       {
+        title: 'Solidity',
+        hex: '363636',
+        source:
+          'https://docs.soliditylang.org/en/v0.8.6/brand-guide.html',
+        guidelines:
+          'https://docs.soliditylang.org/en/v0.8.6/brand-guide.html',
+        license: {
+          type: 'CC-BY-4.0',
+        },
+      },
+      {
         title: 'Tether',
         hex: '50AF95',
         aliases: {
@@ -764,14 +775,6 @@ export const categories: CategoryType[] = [
         title: 'Bitcoin',
         hex: 'F7931A',
         source: 'https://bitcoin.org',
-      },
-      {
-        title: 'Litecoin',
-        hex: 'A6A9AA',
-        source:
-          'https://litecoin-foundation.org/litecoin-branding-guidelines/',
-        guidelines:
-          'https://litecoin-foundation.org/litecoin-branding-guidelines/',
       },
       {
         title: 'XRP',

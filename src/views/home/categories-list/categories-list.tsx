@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { categories } from '@/helpers/db';
 import Category from '@/views/home/categories-list/category/category';
@@ -33,6 +33,27 @@ export default function CategoriesList(): JSX.Element {
   const isAllLoaded =
     categoriesSliced.length === categoriesWithIds.length;
 
+  const loadMoreItems = () =>
+    setCategoriesCount(
+      (prevCategoriesCount) => prevCategoriesCount + 8
+    );
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop !==
+      document.documentElement.offsetHeight
+    ) {
+      return;
+    }
+    loadMoreItems();
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className={s.container}>
       <div className={s.list}>
@@ -45,11 +66,7 @@ export default function CategoriesList(): JSX.Element {
       ) : (
         <button
           className={`${s.loadMore} ${s.allLoaded}`}
-          onClick={() =>
-            setCategoriesCount(
-              (prevCategoriesCount) => prevCategoriesCount + 8
-            )
-          }
+          onClick={loadMoreItems}
         >
           Load more categories
         </button>
