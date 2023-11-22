@@ -10,7 +10,5 @@ export const copyHtml = (badges: BadgeType[]) => {
     .join('')
     .trim();
 
-  const htmlWithAd = `${html}  \nMore at <a href='https://badges.bio'>badges.bio</a>`;
-
-  navigator.clipboard.writeText(htmlWithAd);
+  navigator.clipboard.writeText(html);
 };
