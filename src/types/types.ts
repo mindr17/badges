@@ -1,8 +1,8 @@
 export type BadgeType = {
   id: string;
   title: string;
-  hex: string;
   source: string;
+  hex: string;
   // guidelines?: string;
   // license?: {
   //   type: string;

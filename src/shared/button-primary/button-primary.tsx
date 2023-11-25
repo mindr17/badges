@@ -16,11 +16,5 @@ export default function ButtonPrimary(props: Props): JSX.Element {
     <Link className={s.container} href={href || '/'}>
       {title}
     </Link>
-    // <button
-    //   className={`${s.loadMore} ${s.allLoaded}`}
-    //   onClick={callback}
-    // >
-    //   {title}
-    // </button>
   );
 }
