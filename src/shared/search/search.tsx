@@ -76,7 +76,7 @@ export default function Search(): JSX.Element {
   }, [allBadges, searchString]);
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id='search'>
       <h2 className={s.h2}>Search</h2>
       <div className={s.wrapper}>
         <div className={s.search}>
