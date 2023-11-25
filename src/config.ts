@@ -1,6 +1,7 @@
 const subDomain = '';
 const domain = '';
 export const FRONTEND_URL = 'https://badges.bio';
+export const GOOGLE_ANALYTICS_ID = 'G-XGTDNKK4DT';
 
 const baseConfig = {
   subDomain,
