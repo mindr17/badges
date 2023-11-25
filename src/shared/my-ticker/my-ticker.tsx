@@ -19,7 +19,7 @@ export default function MyTicker(props: Props) {
   return (
     <div className={s.container}>
       <Ticker
-        duration={500}
+        duration={100}
         isPlaying={isPlaying}
         onMouseEnter={() => setIsPlaying(false)}
         onMouseLeave={() => setIsPlaying(true)}
