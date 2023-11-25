@@ -11,6 +11,9 @@ dependencies:
   framer-motion:
     specifier: ^10.16.5
     version: 10.16.5(react-dom@18.2.0)(react@18.2.0)
+  framer-motion-ticker:
+    specifier: ^1.0.19
+    version: 1.0.19(react-dom@18.2.0)(react@18.2.0)
   next:
     specifier: 14.0.2
     version: 14.0.2(react-dom@18.2.0)(react@18.2.0)
@@ -2047,6 +2050,15 @@ packages:
     dependencies:
       is-callable: 1.2.7
     dev: true
+
+  /framer-motion-ticker@1.0.19(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-7c0DaD3rc36TsTEysT3R0bQlChqJuYydbPFgAJDMHVrZrsw+h7oWU3y32ErK8Nm5/LT1TdQYGymL1+btwwUIcw==}
+    dependencies:
+      framer-motion: 10.16.5(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-GEzVjOYP2MIpV9bT/GbhcsBNoImG3/2X3O/xVNWmktkv9MdJ7P/44zELm/7Fjb+O3v39SmKFnoDQB32giThzpg==}

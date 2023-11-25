@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { CSSProperties, useState } from 'react';
 
 import { moreHtmlHorizontal, plus2Html } from '@/iconsHtml/iconsHtml';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
@@ -18,6 +18,7 @@ import s from './badge-product.module.css';
 
 interface Props {
   badge: BadgeType;
+  style?: CSSProperties;
 }
 
 const variants = {
@@ -30,7 +31,7 @@ const variants = {
 };
 
 export default function BadgeProduct(props: Props): JSX.Element {
-  const { badge } = props;
+  const { badge, style } = props;
   const dispatch = useAppDispatch();
   const isSelected = useAppSelector(getSelected).selected.find(
     (storeBadge) =>
@@ -53,7 +54,7 @@ export default function BadgeProduct(props: Props): JSX.Element {
   };
 
   return (
-    <div className={s.container}>
+    <div className={s.container} style={style}>
       <div className={s.add} onClick={handleSelect}>
         <div className={s.badge}>
           <img
