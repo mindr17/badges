@@ -55,7 +55,7 @@ export default function HomeStats(): JSX.Element {
   ];
 
   return (
-    <div className={s.container} id='selected'>
+    <div className={s.container}>
       {stats.map((stat, index) => {
         const { title, count, containerStyle, titleStyle, iconHtml } =
           stat;

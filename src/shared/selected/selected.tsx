@@ -70,7 +70,7 @@ export default function Selected(): JSX.Element {
   };
 
   return (
-    <div className={s.container}>
+    <div className={s.container} id='selected'>
       <h2 className={s.h2}>Selected badges</h2>
       <div className={s.wrapper}>
         <div className={s.selected}>
