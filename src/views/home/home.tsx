@@ -11,7 +11,7 @@ import s from './home.module.css';
 export default function Home(): JSX.Element {
   return (
     <div className={s.container}>
-      <Pinned />
+      {/* <Pinned /> */}
       {/* <Header /> */}
       <Hero />
       <Selected />
