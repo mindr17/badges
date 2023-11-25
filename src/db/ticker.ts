@@ -46,6 +46,78 @@ export const tickerBadges: BadgeType[] = [
     source: 'https://astro.build/press',
   },
   {
+    title: 'CSS3',
+    hex: '1572B6',
+    source: 'https://www.w3.org/html/logo/',
+  },
+  {
+    title: 'Sass',
+    hex: 'CC6699',
+    source: 'https://sass-lang.com/styleguide/brand',
+    guidelines: 'https://sass-lang.com/styleguide/brand',
+    license: {
+      type: 'CC-BY-NC-SA-3.0',
+    },
+  },
+  {
+    title: 'CSS Modules',
+    hex: '000000',
+    source:
+      'https://github.com/css-modules/logos/blob/32e4717062e4328ed861fa92d5d9cfd47859362f/css-modules-logo.svg',
+  },
+  {
+    title: 'Tailwind CSS',
+    hex: '06B6D4',
+    source: 'https://tailwindcss.com/brand',
+    guidelines: 'https://tailwindcss.com/brand',
+  },
+  {
+    title: 'Material Design',
+    hex: '757575',
+    source: 'https://material.io/design/',
+  },
+  {
+    title: 'Docker',
+    hex: '2496ED',
+    source: 'https://www.docker.com/company/newsroom/media-resources',
+  },
+  {
+    title: 'Netlify',
+    hex: '00C7B7',
+    source: 'https://www.netlify.com/press/',
+    guidelines: 'https://www.netlify.com/press/',
+    aliases: {
+      dup: [
+        {
+          title: 'Netlify CMS',
+          hex: 'C9FA4B',
+          source: 'https://www.netlifycms.org',
+        },
+      ],
+    },
+  },
+  {
+    title: 'NGINX',
+    hex: '009639',
+    source: 'https://www.nginx.com/press/',
+    guidelines: 'https://www.nginx.com/press/',
+  },
+  {
+    title: 'Amazon AWS',
+    hex: '232F3E',
+    source:
+      'https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg',
+    aliases: {
+      aka: ['AWS'],
+    },
+  },
+  {
+    title: 'Vercel',
+    hex: '000000',
+    source: 'https://vercel.com/design/brands',
+    guidelines: 'https://vercel.com/design/brands',
+  },
+  {
     title: 'Node.js',
     hex: '339933',
     source: 'https://nodejs.org/en/about/resources/',
@@ -72,5 +144,36 @@ export const tickerBadges: BadgeType[] = [
     title: 'Symphony',
     hex: '0098FF',
     source: 'https://symphony.com',
+  },
+  {
+    title: 'Figma',
+    hex: 'F24E1E',
+    source: 'https://www.figma.com/using-the-figma-brand/',
+    guidelines: 'https://www.figma.com/using-the-figma-brand/',
+  },
+  {
+    title: 'Adobe Illustrator',
+    hex: 'FF9A00',
+    source: 'https://www.adobe.com/creativecloud.html',
+    guidelines:
+      'https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines',
+  },
+  {
+    title: 'Adobe Photoshop',
+    hex: '31A8FF',
+    source: 'https://www.adobe.com/creativecloud.html',
+    guidelines:
+      'https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines',
+  },
+  {
+    title: 'Photopea',
+    hex: '18A497',
+    source:
+      'https://github.com/photopea/photopea/blob/d5c532e8ad8ece246e2ea8646aac7df768407c64/logo.svg',
+  },
+  {
+    title: 'Photobucket',
+    hex: '0672CB',
+    source: 'https://photobucket.com',
   },
 ];

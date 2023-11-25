@@ -1,7 +1,4 @@
 import { tickerBadges } from '@/db/ticker';
-import { fetchData } from '@/helpers/fetch-data';
-import ButtonPrimary from '@/shared/button-primary/button-primary';
-import Header from '@/shared/header/header';
 import Hero from '@/shared/hero/hero';
 import MyTicker from '@/shared/my-ticker/my-ticker';
 import Pinned from '@/shared/pinined/pinned';
@@ -15,7 +12,7 @@ export default async function Home(): Promise<JSX.Element> {
   return (
     <div className={s.container}>
       <MyTicker badges={tickerBadges} />
-      {/* <Pinned /> */}
+      <Pinned />
       {/* <Header /> */}
       <Hero />
       <Selected />
