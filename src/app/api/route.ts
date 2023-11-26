@@ -1,10 +1,12 @@
+import { API_URL } from '@/config';
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type');
 
   if (type === 'get_count') {
     const response = await fetch(
-      'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
+      `${API_URL}/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq`
     );
 
     const countData = await response.json();
@@ -14,7 +16,7 @@ export async function GET(request: Request) {
 
   if (type === 'add_count') {
     const oldResponse = await fetch(
-      'https://api.mafia.game/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq'
+      `${API_URL}/items/badges_stats?access_token=_3qcIwb2IBVeJ9_GEz12SgfWehuHHoIq`
     );
 
     const oldCountData = await oldResponse.json();
@@ -29,18 +31,15 @@ export async function GET(request: Request) {
     //   options
     // );
 
-    const response = await fetch(
-      `https://api.mafia.game/items/badges_stats`,
-      {
-        method: 'PATCH',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer hYdq47WCnLtr_P8sxiYdguRUXT6kQQ4b`,
-        },
-        body: JSON.stringify(body),
-      }
-    );
+    const response = await fetch(`${API_URL}/items/badges_stats`, {
+      method: 'PATCH',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer hYdq47WCnLtr_P8sxiYdguRUXT6kQQ4b`,
+      },
+      body: JSON.stringify(body),
+    });
 
     const countData = await response.json();
 
