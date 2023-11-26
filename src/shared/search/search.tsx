@@ -21,7 +21,7 @@ export default function Search(): JSX.Element {
   const [allBadges, setAllBadges] = useState<BadgeType[]>([]);
   const [searchResults, setSearchResults] = useState<BadgeType[]>([]);
   const [searchString, setSearchString] = useState<string>('');
-  const [debouncedSting, setDebouncedString] = useState('');
+  // const [debouncedSting, setDebouncedString] = useState('');
 
   useEffect(() => {
     fetchData().then((data) => setAllBadges(data?.default?.icons));
@@ -42,16 +42,16 @@ export default function Search(): JSX.Element {
     };
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(
-      () => setDebouncedString(searchString),
-      100
-    );
+  // useEffect(() => {
+  //   const timer = setTimeout(
+  //     () => setDebouncedString(searchString),
+  //     100
+  //   );
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [searchString]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [searchString]);
 
   useEffect(() => {
     if (!searchString || searchString.length < 1) {
