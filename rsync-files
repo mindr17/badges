@@ -1,5 +1,6 @@
 public/
 src/
+.env.local
 
 package.json
 pnpm-lock.yaml
