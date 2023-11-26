@@ -1,15 +1,16 @@
 const subDomain = '';
 const domain = '';
 export const FRONTEND_URL = 'https://badges.bio';
-export const API_URL = 'https://api.badges.bio';
+export const API_URL = process.env.API_URL;
 export const GOOGLE_ANALYTICS_ID = 'G-XGTDNKK4DT';
+export const API_TOKEN_PRIVATE = process.env.API_TOKEN_PRIVATE;
 
 const baseConfig = {
   subDomain,
   domain,
   baseUrl: `https://${domain}`,
   fetchUrl: `https://${subDomain}.${domain}`,
-  apiToken: '',
+  apiTokenPrivate: process.env.API_TOKEN_PRIVATE,
 };
 
 const devConfig = {
