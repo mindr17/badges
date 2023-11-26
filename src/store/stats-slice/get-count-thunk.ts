@@ -7,7 +7,6 @@ export const getCount = createAsyncThunk(
   async () => {
     const response = await fetch(
       `${config.apiRoutesUrl}/api?type=get_count`
-      // `/api?type=get_count`
     );
 
     const countData = await response.json();

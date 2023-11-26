@@ -13,17 +13,10 @@ export default async function Home(): Promise<JSX.Element> {
     <div className={s.container}>
       <MyTicker badges={tickerBadges} />
       <Pinned />
-      {/* <Header /> */}
       <Hero />
       <Selected />
       <Search />
-      {/* <Popular /> */}
       <CategoriesList />
-      {/* <MoreLink /> */}
-      {/* <ButtonPrimary
-        href={'/all'}
-        title={'2500 badges alphabetically'}
-      /> */}
     </div>
   );
 }

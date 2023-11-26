@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react';
 
+import BadgeProduct from '@/shared/badge-product/badge-product';
 import { BadgeType } from '@/types/types';
 
-import BadgeProduct from '../badge-product/badge-product';
 import s from './search.module.css';
 
 const fetchData = async () => {
@@ -26,6 +26,8 @@ export default function Search(): JSX.Element {
         setSearchString('');
       }
     };
+
+    if (!window) return;
 
     const escListener = window.addEventListener(
       'keydown',

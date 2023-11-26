@@ -6,8 +6,6 @@ export const addCount = createAsyncThunk(
   'stats/addCount',
   async (countToAdd: number) => {
     const response = await fetch(
-      // `https://getbadges.vercel.app/api?type=set_count&count=${countToAdd}`
-      // `/api?type=add_count&count=${countToAdd}`
       `${config.apiRoutesUrl}/api?type=add_count&count=${countToAdd}`
     );
 
