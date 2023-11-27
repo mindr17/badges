@@ -1,8 +1,6 @@
-# [https://badges.bio/](https://badges.bio/)
+# Simple badges picker for developers.
 
-## Simple picker for developers.
-
-## Giving Nextjs App router a try!
+## [https://badges.bio/](https://badges.bio/)
 
 Install packages
 
