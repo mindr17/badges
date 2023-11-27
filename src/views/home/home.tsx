@@ -1,4 +1,6 @@
+import { homeBodyHtml } from '@/db/home-body-html';
 import { tickerBadges } from '@/db/ticker';
+import Body from '@/shared/body/body';
 import Hero from '@/shared/hero/hero';
 import MyTicker from '@/shared/my-ticker/my-ticker';
 import Pinned from '@/shared/pinined/pinned';
@@ -17,6 +19,7 @@ export default async function Home(): Promise<JSX.Element> {
       <Selected />
       <Search />
       <CategoriesList />
+      <Body html={homeBodyHtml} />
     </div>
   );
 }

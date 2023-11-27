@@ -121,3 +121,7 @@ export const moreHtmlVertical = `
 
 export const moreHtmlHorizontal = `
 <svg fill="currentColor" height="32" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m16.5 11.995c0-1.242 1.008-2.25 2.25-2.25s2.25 1.008 2.25 2.25-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25zm-6.75 0c0-1.242 1.008-2.25 2.25-2.25s2.25 1.008 2.25 2.25-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25zm-6.75 0c0-1.242 1.008-2.25 2.25-2.25s2.25 1.008 2.25 2.25-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25z"/></svg>`;
+
+export const arrowUp = `<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.407749 5.54815L6.20004 -0.244141L11.9923 5.54815L11.1408 6.39967L6.20004 1.45891L1.25927 6.39967L0.407749 5.54815Z" fill="#1C1B1F"/>
+</svg>`;
