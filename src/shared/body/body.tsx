@@ -18,13 +18,10 @@ export default function Body(props: Props): JSX.Element {
   return (
     <>
       <div
-        className={s.container}
+        className={s.text}
         dangerouslySetInnerHTML={{ __html: html || '' }}
       />
       <button className={s.button} onClick={() => setOpen(!isOpen)}>
-        {/* {isOpen
-            ? global_variable?.hide_text
-            : global_variable?.read_text} */}
         <div className={!isOpen ? s.arrow : ''}>
           <Icon html={arrowUp} />
         </div>
