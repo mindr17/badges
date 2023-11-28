@@ -1,17 +1,21 @@
 import { API_TOKEN_PRIVATE, API_URL } from '@/config';
 
+const getCount = async () => {
+  const response = await fetch(
+    `${API_URL}/items/badges_stats?access_token=${API_TOKEN_PRIVATE}`
+  );
+
+  const countData = await response.json();
+
+  return Response.json({ countData });
+};
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type');
 
   if (type === 'get_count') {
-    const response = await fetch(
-      `${API_URL}/items/badges_stats?access_token=${API_TOKEN_PRIVATE}`
-    );
-
-    const countData = await response.json();
-
-    return Response.json({ countData });
+    getCount();
   }
 
   if (type === 'add_count') {
