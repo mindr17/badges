@@ -6,11 +6,11 @@ import {
   iconsStatsHtml,
   iconsTotalBadges,
 } from '@/iconsHtml/iconsHtml';
+import Counter from '@/shared/counter/counter';
 import Icon from '@/shared/icon/icon';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { getCount } from '@/store/stats-slice/get-count-thunk';
 
-import Counter from '../counter/counter';
 import s from './home-stats.module.css';
 
 export default function HomeStats(): JSX.Element {
@@ -22,13 +22,6 @@ export default function HomeStats(): JSX.Element {
   useEffect(() => {
     dispatch(getCount());
   }, [dispatch]);
-
-  // const count = useAppSelector(getStats);
-  // const response = await fetch(
-  //   'https://api.mafia.game/badges_stats/copied_count?access_token='
-  // );
-
-  // const count = await response.json();
 
   const stats = [
     {
@@ -68,7 +61,6 @@ export default function HomeStats(): JSX.Element {
                 from={title === 'Badges grabbed' ? previousCount : 0}
                 to={count}
               />
-              {/* {formatNumberWithCommas(count)} */}
             </div>
             <div className={s.icon}>
               <Icon html={iconHtml} />

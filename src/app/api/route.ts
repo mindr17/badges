@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   const type = searchParams.get('type');
 
   if (type === 'get_count') {
-    getCount();
+    await getCount();
   }
 
   if (type === 'add_count') {

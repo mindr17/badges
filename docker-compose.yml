@@ -2,12 +2,12 @@ version: '3.8'
 
 services:
   badges-frontend:
+    container_name: badges-frontend
     restart: always
     build:
       context: /root/badges/frontend
       dockerfile: Dockerfile
     image: badges-frontend-image
-    container_name: badges-frontend
     ports:
       - "3003:3000"
     environment:
