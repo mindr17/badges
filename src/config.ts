@@ -10,6 +10,8 @@ const baseConfig = {
   domain,
   baseUrl: `https://${domain}`,
   fetchUrl: `https://${subDomain}.${domain}`,
+  publicApiUrl: `https://${subDomain}.${domain}`,
+  graphqlUrl: `https://${subDomain}.${domain}`,
   apiTokenPrivate: process.env.API_TOKEN_PRIVATE,
 };
 
@@ -17,6 +19,7 @@ const devConfig = {
   apiRoutesUrl: '',
 };
 const prodConfig = {
+  graphqlUrl: `https://192.168.208.1:8056`,
   apiRoutesUrl: FRONTEND_URL,
 };
 
