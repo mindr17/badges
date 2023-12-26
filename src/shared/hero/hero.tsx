@@ -28,7 +28,7 @@ export default function Hero(): JSX.Element {
         <div className={s.description}>
           For Github profile, personal website, etc
         </div>
-        <div className={s.description}>
+        {/* <div className={s.description}>
           and join
           <a
             className={s.telegram}
@@ -37,7 +37,7 @@ export default function Hero(): JSX.Element {
           >
             telegram chat!
           </a>
-        </div>
+        </div> */}
         <div className={s.statsContainer}>
           {/* <Stats /> */}
           <HomeStats />
