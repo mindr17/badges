@@ -28,6 +28,7 @@ export default function CategoriesList(): JSX.Element {
     loadMoreItems();
   };
 
+  // Use MutationObserver()
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
